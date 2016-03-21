@@ -17,6 +17,15 @@ Route::get('/', function () {
 Route::get('products',function(){
     return view('products.category');
 });
+Route::get('products/test',function(){
+    return view('products.category_in');
+});
+Route::get('products/testp',function(){
+    return view('products.productf');
+});
+Route::get('products/testt',function(){
+    return view('products.productt');
+});
 Route::get('contact-service',function(){
     return view('contact_service');
 });
@@ -25,6 +34,9 @@ Route::get('company',function(){
 });
 Route::get('news',function(){
     return view('news.list');
+});
+Route::get('news/test',function(){
+    return view('news.news_detals');
 });
 Route::get('news/newsletter',function(){
     return view('news.newsletter');

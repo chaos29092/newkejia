@@ -22,7 +22,7 @@
     <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
         <nav class="nav">
             <ul>
-                <li><a href="ovens/index.html">Ovens</a>
+                <li><a href="/products/test">Ovens</a>
                     <ul>
                         <li><a href="ovens/laboratory-ovens/index.html">Laboratory Ovens</a></li>
                         <li><a href="ovens/industrial-ovens/index.html">Industrial Ovens</a></li>
@@ -96,7 +96,7 @@
 
             <div id="c192778" class="csc-default">
                 <ul class="toc font-small">
-                    <li><a href="ovens/index.html"><img
+                    <li><a href="/products/test"><img
                                     src="images/business-area-ovens.jpg"><span>Ovens</span></a>
                         <ul>
                             <li><strong>Max. temp. up to 750°C</strong></li>

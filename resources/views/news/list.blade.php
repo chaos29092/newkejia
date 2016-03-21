@@ -41,7 +41,7 @@
                                  alt="">
                         </div>
                         <div class="information">
-                            <h2><a href="news-details/news_detail/1270.html"> Carbolite Gero Sponsors Sheffield Hallam
+                            <h2><a href="/news/test"> Carbolite Gero Sponsors Sheffield Hallam
                                     University Racing Team </a></h2>
 
                             <p>Sheffield Hallam University (SHU) Racing is an organisation founded and run by SHU
