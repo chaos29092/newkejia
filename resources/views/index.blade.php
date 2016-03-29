@@ -112,15 +112,14 @@
             </div>
             <div id="c192699" class="csc-default">
                 <ul class="toc font-small">
-                    <li><a href="products/ovens/index.html"><img
-                                    src="images/business-area-ovens.jpg"><span>Ovens</span></a>
+                    <li><a href="/products/muffle_furnace"><img
+                                    src="/images/business-area-ovens.jpg"><span>Muffle Furnace</span></a>
                         <ul>
-                            <li><strong>Max. temp. up to 750°C</strong></li>
-                            <li><a href="products/ovens/laboratory-ovens/index.html">Laboratory Ovens</a></li>
-                            <li><a href="products/ovens/industrial-ovens/index.html">Industrial Ovens</a></li>
-                            <li><a href="products/ovens/clean-room-ovens/index.html">Clean Room Ovens</a></li>
-                            <li><a href="products/ovens/atmosphere-controlled-ovens/index.html">Atmosphere Controlled
-                                    Ovens</a></li>
+                            <li><strong>Max. temp. up to 1700°C</strong></li>
+
+                            @foreach($products->where('category_id',1)->all() as $product)
+                                <li><a href="/products/{{$product->id}}">{{$product->name}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
                     <li><a href="products/chamber-furnaces/index.html"><img

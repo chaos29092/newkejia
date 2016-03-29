@@ -11,15 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/products',function(){
-    return view('products.category');
-});
-Route::get('/products/test',function(){
-    return view('products.category_in');
-});
+Route::get('/','HomeController@index');
+Route::get('/products','HomeController@categories');
+
+Route::get('/products/category/{id}','HomeController@category');
+
 Route::get('/products/testp',function(){
     return view('products.productf');
 });
