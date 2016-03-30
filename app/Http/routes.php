@@ -15,10 +15,9 @@ Route::get('/','HomeController@index');
 Route::get('/products','HomeController@categories');
 
 Route::get('/products/category/{id}','HomeController@category');
+Route::get('/products/{id}','HomeController@product');
+Route::get('/products/{id}/models','HomeController@models');
 
-Route::get('/products/testp',function(){
-    return view('products.productf');
-});
 Route::get('/products/testt',function(){
     return view('products.productt');
 });
