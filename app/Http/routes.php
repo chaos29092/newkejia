@@ -18,9 +18,6 @@ Route::get('/products/category/{id}','HomeController@category');
 Route::get('/products/{id}','HomeController@product');
 Route::get('/products/{id}/models','HomeController@models');
 
-Route::get('/products/testt',function(){
-    return view('products.productt');
-});
 Route::get('/contact-service',function(){
     return view('contact_service');
 });

@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use App\Http\Requests;
 use App\ProductModel;
+use Qiniu;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
