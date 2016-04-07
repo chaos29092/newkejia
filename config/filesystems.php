@@ -61,6 +61,13 @@ return [
             'region' => 'your-region',
             'bucket' => 'your-bucket',
         ],
+        'qiniu' => [
+            'driver' => 'qiniu',
+            'domain' => '7xsfqx.com2.z0.glb.qiniucdn.com',   //你的七牛域名
+            'access_key'    => 'wnGVDMLiQTWuN8Iq2vjvrL-uCDuD3_mAahxqhO8K',                          //AccessKey
+            'secret_key' => 'C51gdhJlDQZdfPZOYG5dAGuF8SGyUXsfJYqJjcmA',                             //SecretKey
+            'bucket' => 'kejia',                                 //Bucket名字
+        ],
 
     ],
 

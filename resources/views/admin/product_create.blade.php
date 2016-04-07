@@ -8,7 +8,7 @@
                     <div class="panel-heading">新建产品</div>
                 </div>
 
-                <form action="/admin/product" method="POST">
+                <form action="/admin/product" method="POST" enctype = "multipart/form-data">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <label for="productName">产品名称(*)</label>
@@ -37,13 +37,16 @@
                         <label for="productName">页面关键词</label>
                         <input type="text" class="form-control" id="productName" name="keywords" placeholder="">
                     </div>
+
                     <div class="form-group">
-                        <label for="mainPicture">产品主图（直接用七牛云存储的相关链接，宽度为220px）</label>
-                        <input type="text" class="form-control" id="mainPicture" name="mainpic" placeholder="图床链接（宽度220px）">
+                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好）。</label>
+                        <input name="file" type="file" />
                     </div>
+
                     <div class="form-group">
                         <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px）</label>
-                        <input type="text" class="form-control" id="categoryPicture" name="categorypic" placeholder="分类页主图（234*300）">
+                        <input name="categorypic" type="file" id="categoryPicture">
+
                     </div>
                     <div class="form-group">
                         <label for="categoryPara">分类页简单参数(li列表)：</label>
@@ -69,6 +72,7 @@
 
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
+
             </div>
         </div>
     </div>

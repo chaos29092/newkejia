@@ -8,7 +8,7 @@
                     <div class="panel-heading">编辑产品</div>
                 </div>
 
-                <form action="/admin/product/{{$product['id']}}" method="POST">
+                <form action="/admin/product/{{$product['id']}}" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_method" value="put" />
                     {!! csrf_field() !!}
                     <div class="form-group">
@@ -39,8 +39,9 @@
                         <input type="text" class="form-control" id="productName" name="keywords" value="{{$product['keywords']}}">
                     </div>
                     <div class="form-group">
-                        <label for="mainPicture">产品主图（直接用七牛云存储的相关链接，宽度为220px）</label>
-                        <input type="text" class="form-control" id="mainPicture" name="mainpic" value="{{$product['mainpic']}}">
+                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好）。</label>
+                        <input name="mainpic" type="file" id="mainPicture">
+                        <img src="http://7xsfqx.com2.z0.glb.qiniucdn.com/testpic.jpg?imageView2/0/w/200/h/200" alt="{{$product['title']}}">
                     </div>
                     <div class="form-group">
                         <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px）</label>

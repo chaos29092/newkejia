@@ -36,21 +36,27 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        $product = new \App\Product();
-        $product->name = $request->name;
-        $product->title = $request->title;
-        $product->description = $request->description;
-        $product->keywords = $request->keywords;
-        $product->mainpic = $request->mainpic;
-        $product->profile = $request->profile;
-        $product->main = $request->main;
-        $product->standard = $request->standard;
-        $product->options = $request->options;
-        $product->categorypic = $request->categorypic;
-        $product->categorypara = $request->categorypara;
-        $product->category_id = $request->category_id;
+//        $product = new \App\Product();
+//        $product->name = $request->name;
+//        $product->title = $request->title;
+//        $product->description = $request->description;
+//        $product->keywords = $request->keywords;
+////        $product->mainpic = $request->mainpic;
+//        $product->profile = $request->profile;
+//        $product->main = $request->main;
+//        $product->standard = $request->standard;
+//        $product->options = $request->options;
+////        $product->categorypic = $request->categorypic;
+//        $product->categorypara = $request->categorypara;
+//        $product->category_id = $request->category_id;
 
-        $product->save();
+        if ($request->file('file'))
+        {
+            $disk=\Storage::disk('qiniu');
+            $disk->put('11111.jpg',$request->file('file'));
+        }
+
+//        $product->save();
         return redirect('/admin');
     }
 
@@ -67,7 +73,7 @@ class ProductController extends Controller
         $product->title = $request->title;
         $product->description = $request->description;
         $product->keywords = $request->keywords;
-        $product->mainpic = $request->mainpic;
+//        $product->mainpic = $request->mainpic;
         $product->profile = $request->profile;
         $product->main = $request->main;
         $product->standard = $request->standard;
@@ -75,6 +81,7 @@ class ProductController extends Controller
         $product->categorypic = $request->categorypic;
         $product->categorypara = $request->categorypara;
         $product->category_id = $request->category_id;
+
 
         $product->save();
         return redirect('/admin');
