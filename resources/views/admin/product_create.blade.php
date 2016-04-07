@@ -39,12 +39,12 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好）。</label>
-                        <input name="file" type="file" />
+                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，要求.jpg格式）。</label>
+                        <input name="mainpic" type="file" />
                     </div>
 
                     <div class="form-group">
-                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px）</label>
+                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，jpg）</label>
                         <input name="categorypic" type="file" id="categoryPicture">
 
                     </div>

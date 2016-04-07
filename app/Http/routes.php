@@ -49,7 +49,6 @@ Route::get('/downloads/miscellaneous',function(){
     return view('downloads_miscellaneous');
 });
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
