@@ -39,12 +39,12 @@
                         <input type="text" class="form-control" id="productName" name="keywords" value="{{$product['keywords']}}">
                     </div>
                     <div class="form-group">
-                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，.jpg格式）。</label>
+                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，.jpg格式，由于同步问题，暂时无法删除图片，欲换图片只能删除产品再上传了，这里只做预览）。</label>
                         <input name="mainpic" type="file" id="mainPicture">
                         <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
                     </div>
                     <div class="form-group">
-                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，.jpg格式）</label>
+                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，.jpg格式，由于同步问题，暂时无法删除图片，欲换图片只能删除产品再上传了，这里只做预览）</label>
                         <input name="categorypic" type="file" id="categoryPicture">
                         <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}_category.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
                     </div>

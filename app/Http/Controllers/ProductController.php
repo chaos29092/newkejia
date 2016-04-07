@@ -97,12 +97,10 @@ class ProductController extends Controller
         $product->title = $request->title;
         $product->description = $request->description;
         $product->keywords = $request->keywords;
-//        $product->mainpic = $request->mainpic;
         $product->profile = $request->profile;
         $product->main = $request->main;
         $product->standard = $request->standard;
         $product->options = $request->options;
-//        $product->categorypic = $request->categorypic;
         $product->categorypara = $request->categorypara;
         $product->category_id = $request->category_id;
 
@@ -140,8 +138,18 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = \App\Product::find($id);
+        $accessKey = \Config::get('filesystems.disks.qiniu.access_key');
+        $secretKey = \Config::get('filesystems.disks.qiniu.secret_key');
+        $bucket = \Config::get('filesystems.disks.qiniu.bucket');
+        $auth = new QiniuAuth($accessKey, $secretKey);
+        $bucketMgr = new BucketManager($auth);
+        $key = 'product_' . $product['name'] . '.jpg';
+        $key2 = 'product_' . $product['name'] . '_category.jpg';
+        $bucketMgr->delete($bucket, $key);
+        $bucketMgr->delete($bucket, $key2);
         $product->delete();
         return redirect('/admin');
     }
+
 
 }

@@ -64,6 +64,8 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/admin', 'ProductController@index');
+    Route::get('/admin/categories', 'CategoryController@index');
 
     Route::resource('/admin/product', 'ProductController');
+    Route::resource('/admin/category', 'CategoryController');
 });
