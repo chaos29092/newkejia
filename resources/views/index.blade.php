@@ -1,17 +1,5 @@
 @extends('master')
 
-@section('nav')
-    <nav class="nav">
-        <ul>
-            <li class="current"><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/contact-service">Contact & Service</a></li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/company">Company</a></li>
-            <li><a href="/downloads">Downloads</a></li>
-        </ul>
-    </nav>
-    @stop
     @section('content')
             <!-- Full-Width Area -->
     <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent">
@@ -108,6 +96,7 @@
                     with a focus on vacuum and special atmosphere technology. With more than 100 years of experience in
                     thermal engineering our products are used in research laboratories, pilot plants and manufacturing
                     sites worldwide.
+
                 </div>
             </div>
             <div id="c192699" class="csc-default">

@@ -18,12 +18,9 @@
                     <div class="form-group">
                         <label for="categoryId">产品分类(*)</label>
                         <select class="form-control" id="categoryId" name="category_id">
-                            <option value="1" @if($product['category_id']==1)selected="selected"@endif>Muffle Furnace</option>
-                            <option value="2" @if($product['category_id']==2)selected="selected"@endif>Tube Furnace</option>
-                            <option value="3" @if($product['category_id']==3)selected="selected"@endif>CVD & PECVD Systems</option>
-                            <option value="4" @if($product['category_id']==4)selected="selected"@endif>Dental Furnace</option>
-                            <option value="5" @if($product['category_id']==5)selected="selected"@endif>Vacuum Furnace & Atmosphere Furnace</option>
-                            <option value="6" @if($product['category_id']==6)selected="selected"@endif>Customized Furnaces</option>
+                            @foreach($categories as $category)
+                                <option value="{{$category['id']}}" @if($product['category_id']==$category['id'])selected="selected"@endif>{{$category['name']}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group">
@@ -39,12 +36,12 @@
                         <input type="text" class="form-control" id="productName" name="keywords" value="{{$product['keywords']}}">
                     </div>
                     <div class="form-group">
-                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，.jpg格式，由于同步问题，暂时无法删除图片，欲换图片只能删除产品再上传了，这里只做预览）。</label>
+                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，.jpg格式，无法删除图片，这里只能新添，无法修改，欲删除，就删产品）。</label>
                         <input name="mainpic" type="file" id="mainPicture">
                         <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
                     </div>
                     <div class="form-group">
-                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，.jpg格式，由于同步问题，暂时无法删除图片，欲换图片只能删除产品再上传了，这里只做预览）</label>
+                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，.jpg格式，无法删除图片，这里只能新添，无法修改，欲删除，就删产品）</label>
                         <input name="categorypic" type="file" id="categoryPicture">
                         <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}_category.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
                     </div>

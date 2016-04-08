@@ -1,17 +1,6 @@
 @extends('master')
 
-    @section('nav')
-    <nav class="nav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/contact-service">Contact & Service</a></li>
-            <li><a href="/news">News</a></li>
-            <li class="current"><a href="/company">Company</a></li>
-            <li><a href="/downloads">Downloads</a></li>
-        </ul>
-    </nav>
-    @stop
+
     @section('content')
 
             <!-- Full-Width Area -->

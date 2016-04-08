@@ -61,7 +61,16 @@
                     </ul>
                 </div>
             </div>
-            @yield('nav')
+            <nav class="nav">
+                <ul>
+                    <li @if(url()->current()=='newkejia')class="current"@endif><a href="/">Home{{url()->current()}}</a></li>
+                    <li @if(strpos(url()->current(),'/products'))class="current"@endif><a href="/products">Products</a></li>
+                    <li @if(strpos(url()->current(),'/contact-service'))class="current"@endif><a href="/contact-service">Contact & Service</a></li>
+                    <li @if(strpos(url()->current(),'/news'))class="current"@endif><a href="/news">News</a></li>
+                    <li @if(strpos(url()->current(),'/company'))class="current"@endif><a href="/company">Company</a></li>
+                    <li @if(strpos(url()->current(),'/downloads'))class="current"@endif><a href="/downloads">Downloads</a></li>
+                </ul>
+            </nav>
 
         </div>
         <nav class="breadcrumbs grid-100 tablet-grid-100">

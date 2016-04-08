@@ -5,59 +5,31 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">新建产品</div>
+                    <div class="panel-heading">新建产品分类</div>
                 </div>
 
-                <form action="/admin/product" method="POST" enctype = "multipart/form-data">
+                <form action="/admin/category" method="POST" enctype = "multipart/form-data">
                     {!! csrf_field() !!}
                     <div class="form-group">
-                        <label for="productName">分类名称(*)</label>
-                        <input required type="text" class="form-control" id="productName" name="name" placeholder="产品分类名称">
+                        <label for="categoryName">分类名称(*)</label>
+                        <input required type="text" class="form-control" id="categoryName" name="name" placeholder="产品分类名称">
                     </div>
                     <div class="form-group">
                         <label for="maxTemp">最高温度</label>
-                        <input type="text" class="form-control" id="maxTemp" name="max_temp" placeholder="">
+                        <input type="text" class="form-control" id="maxTemp" name="max_temp" value="Max. temp. up to xxx°C">
                     </div>
                     <div class="form-group">
-                        <label for="productDescription">页面描述</label>
-                        <textarea class="form-control" rows="3" id="productDescription" name="description"></textarea>
+                        <label for="mainPicture">总分类页缩略图（使用七牛云，227*150px，要求.jpg格式）。</label>
+                        <input name="main_pic" type="file" />
                     </div>
                     <div class="form-group">
-                        <label for="productName">页面关键词</label>
-                        <input type="text" class="form-control" id="productName" name="keywords" placeholder="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，要求.jpg格式）。</label>
-                        <input name="mainpic" type="file" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，jpg）</label>
-                        <input name="categorypic" type="file" id="categoryPicture">
-
+                        <label for="mainPicture">分类页banner（使用七牛云，768*210px，要求.jpg格式）。</label>
+                        <input name="banner" type="file" />
                     </div>
                     <div class="form-group">
-                        <label for="categoryPara">分类页简单参数(li列表)：</label>
-                        <textarea class="form-control" rows="2" id="categoryPara" name="categorypara"></textarea>
+                        <label for="description">分类页简单介绍：</label>
+                        <textarea class="form-control" rows="6" id="description" name="description"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="productProfile">主要功能介绍（最上面的黑体字）</label>
-                        <textarea class="form-control" rows="2" id="productProfile" name="profile"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="productMain">简单介绍（外观和原理的简单介绍）：</label>
-                        <textarea class="form-control" rows="3" id="productMain" name="main"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="productStandard">简单介绍（外观和原理的简单介绍,li列表）：</label>
-                        <textarea class="form-control" rows="6" id="productStandard" name="standard"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="productOptions">可选选项（订购时可选配件或附加件,li列表）：</label>
-                        <textarea class="form-control" rows="4" id="productOptions" name="options"></textarea>
-                    </div>
-
 
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>

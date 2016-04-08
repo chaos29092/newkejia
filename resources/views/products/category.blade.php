@@ -1,16 +1,5 @@
 @extends('master')
-@section('nav')
-    <nav class="nav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li class="current"><a href="/products">Products</a></li>
-            <li><a href="/contact-service">Contact & Service</a></li>
-            <li><a href="/news">News</a></li>
-            <li><a href="/company">Company</a></li>
-            <li><a href="/downloads">Downloads</a></li>
-        </ul>
-    </nav>
-    @stop
+
     @section('content')
             <!-- Full-Width Area -->
     <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent">
@@ -54,8 +43,11 @@
                 </div>
             </div>
             <h1>{{ucwords($category_this->name)}}</h1>
+            <div id="c120282" class="csc-default" style="margin-bottom:20px;">
+                <div>{{$category_this->description}}</div>
+            </div>
 
-            <div id="c94459" class="csc-default">
+            <div class="csc-default">
                 <ul class="product_group">
 
                     @foreach($products_this as $product)
@@ -71,10 +63,6 @@
                         </li>
                     @endforeach
                 </ul>
-            </div>
-            <div id="c112142" class="csc-default" style="margin-bottom:10px;">
-                <div> {{$category_this->description}}
-                </div>
             </div>
         </div>
     </div>

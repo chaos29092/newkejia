@@ -1,17 +1,5 @@
 @extends('master')
 
-    @section('nav')
-    <nav class="nav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/contact-service">Contact & Service</a></li>
-            <li class="current"><a href="/news">News</a></li>
-            <li><a href="/company">Company</a></li>
-            <li><a href="/downloads">Downloads</a></li>
-        </ul>
-    </nav>
-    @stop
     @section('content')
             <!-- Full-Width Area -->
     <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent">
