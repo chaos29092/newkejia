@@ -63,12 +63,12 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li @if(url()->current()=='newkejia')class="current"@endif><a href="/">Home{{url()->current()}}</a></li>
-                    <li @if(strpos(url()->current(),'/products'))class="current"@endif><a href="/products">Products</a></li>
-                    <li @if(strpos(url()->current(),'/contact-service'))class="current"@endif><a href="/contact-service">Contact & Service</a></li>
-                    <li @if(strpos(url()->current(),'/news'))class="current"@endif><a href="/news">News</a></li>
-                    <li @if(strpos(url()->current(),'/company'))class="current"@endif><a href="/company">Company</a></li>
-                    <li @if(strpos(url()->current(),'/downloads'))class="current"@endif><a href="/downloads">Downloads</a></li>
+                    <li @if(url()->current()=='http://'.$_SERVER['SERVER_NAME'])class="current"@endif><a href="/">Home</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/products'))class="current"@endif><a href="/products">Products</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/contact-service'))class="current"@endif><a href="/contact-service">Contact & Service</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/news'))class="current"@endif><a href="/news">News</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/company'))class="current"@endif><a href="/company">Company</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/downloads'))class="current"@endif><a href="/downloads">Downloads</a></li>
                 </ul>
             </nav>
 

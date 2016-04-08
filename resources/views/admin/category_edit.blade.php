@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">编辑产品分类</div>
+                    <div class="panel-heading">编辑产品分类(分类如删除，得把本分类的产品再重新分到新的分类中)</div>
                 </div>
 
-                <form action="/admin/product/{{$category['id']}}" method="POST" enctype="multipart/form-data">
+                <form action="/admin/category/{{$category['id']}}" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_method" value="put" />
                     {!! csrf_field() !!}
                     <div class="form-group">

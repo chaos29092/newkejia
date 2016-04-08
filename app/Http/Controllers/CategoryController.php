@@ -110,7 +110,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = new \App\Category();
+        $category = \App\Category::find($id);
         $category->name = $request->name;
         $category->max_temp = $request->max_temp;
         $category->description = $request->description;
