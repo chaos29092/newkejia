@@ -27,9 +27,10 @@ class ModelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        $product_id = $id;
+        return view('admin.model_create',['product_id'=>$product_id]);
     }
 
     /**
@@ -40,7 +41,15 @@ class ModelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new \App\ProductModel();
+        $model->name = $request->name;
+        $model->main = $request->main;
+        $model->more = $request->more;
+        $model->product_id = $request->product_id;
+
+        $model->save();
+        return redirect('/admin/product/'.$request->product_id.'/edit');
+
     }
 
     /**
@@ -62,7 +71,8 @@ class ModelController extends Controller
      */
     public function edit($id)
     {
-        //
+        $model = \App\ProductModel::find($id);
+        return view('admin.model_edit',['model'=>$model]);
     }
 
     /**
@@ -74,7 +84,14 @@ class ModelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $model = \App\ProductModel::find($id);
+        $model->name = $request->name;
+        $model->main = $request->main;
+        $model->more = $request->more;
+        $model->product_id = $request->product_id;
+
+        $model->save();
+        return redirect('/admin/product/'.$request->product_id.'/edit');
     }
 
     /**
@@ -85,6 +102,10 @@ class ModelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $model= \App\ProductModel::find($id);
+        $product_id = $model['product_id'];
+        $model->delete();
+        return redirect('/admin/product/'.$product_id.'/edit');
+
     }
 }

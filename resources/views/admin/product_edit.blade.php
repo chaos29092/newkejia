@@ -69,6 +69,41 @@
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                <br>
+                <div>
+                    <table class="table">
+
+                        <tr>
+                            <td>型号</td>
+                            <td>修改日期</td>
+                            <td><a href="/admin/model/create/{{$product['id']}}"><button type="button" class="btn btn-primary">新建</button></a></td>
+                        </tr>
+
+                        @foreach($models as $model)
+                            <tr>
+                                <td>{{$model['name']}}</td>
+                                <td>{{$model['updated_at']}}</td>
+                                <td>
+
+
+                                    <form action="/admin/model/{{$model['id']}}" method="POST">
+                                        <input type="hidden" name="_method" value="delete" />
+                                        {!! csrf_field() !!}
+                                        <a href="/admin/model/{{$model['id']}}/edit"><button type="button" class="btn btn-success">修改</button></a>
+                                        <script language="javascript">
+                                            function delcfm() {
+                                                if (!confirm("确认要删除？")) {
+                                                    window.event.returnValue = false;
+                                                }
+                                            }
+                                        </script>
+                                        <button type="submit" class="btn btn-danger" onClick="delcfm()">删除</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </table>
+                </div>
             </div>
         </div>
     </div>

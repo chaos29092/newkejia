@@ -86,9 +86,10 @@ class ProductController extends Controller
 
     public function edit($id)
     {
+        $models = \App\ProductModel::where('product_id',$id)->get();
         $product = \App\Product::find($id);
         $categories = \App\Category::all();
-        return view('admin.product_edit', ['product' => $product,'categories'=>$categories]);
+        return view('admin.product_edit', ['product' => $product,'categories'=>$categories,'models'=>$models]);
     }
 
     public function update(Request $request, $id)
@@ -139,6 +140,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = \App\Product::find($id);
+
         $accessKey = \Config::get('filesystems.disks.qiniu.access_key');
         $secretKey = \Config::get('filesystems.disks.qiniu.secret_key');
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
@@ -149,6 +151,7 @@ class ProductController extends Controller
         $bucketMgr->delete($bucket, $key);
         $bucketMgr->delete($bucket, $key2);
         $product->delete();
+        $models = \App\ProductModel::where('product_id',$id)->delete();
         return redirect('/admin');
     }
 
