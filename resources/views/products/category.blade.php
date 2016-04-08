@@ -19,7 +19,7 @@
                         <a href="/products/category/{{$category->id}}">{{ucwords($category->name)}}</a>
                         @if($category->id == $id)
                             <ul>
-                                @foreach($products->where('category_id',$category->id)->all() as $product)
+                                @foreach($products as $product)
                                     <li class=""><a href="/products/{{$product->id}}">{{ucwords($product->name)}}</a>
                                     </li>
                                 @endforeach
@@ -53,7 +53,7 @@
             <div class="csc-default">
                 <ul class="product_group">
 
-                    @foreach($products_this as $product)
+                    @foreach($products as $product)
                         <li>
                             <h2><a href="/products/{{$product->id}}">{{ucwords($product->name)}}</a></h2>
                             <div>

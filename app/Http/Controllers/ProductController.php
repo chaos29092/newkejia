@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at', 'desc')->paginate(20);
+        $products = Product::orderBy('created_at', 'desc')->select('id','name','category_id','updated_at')->paginate(20);
         $categories = Category::all();
 
         return view('admin.home', ['products' => $products, 'categories' => $categories]);

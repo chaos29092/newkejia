@@ -15,8 +15,8 @@
                                 href="/products/category/{{$category->id}}">{{ucwords($category->name)}}</a>
                         @if($category == $category_this)
                             <ul>
-                                @foreach($products_this as $product)
-                                    <li @if($product == $product_this)class="active"@endif><a
+                                @foreach($products as $product)
+                                    <li @if($product['id'] == $product_this['id'])class="active"@endif><a
                                                 href="/products/{{$product->id}}">{{ucwords($product->name)}}</a></li>
                                 @endforeach
                             </ul>
