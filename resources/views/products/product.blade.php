@@ -1,4 +1,7 @@
 @extends('master')
+@section('breadcrumbs')
+    <li><a href="">{{$product_this['name']}}</a></li>
+    @stop
 
     @section('content')
             <!-- Full-Width Area -->
@@ -33,9 +36,9 @@
                 <h1 class="first">{{ucwords($product_this->name)}}</h1>
 
                 <ul class="tabs">
-                    <li class="current"><a href="/products/{{$product->id}}">Features
+                    <li class="current"><a href="/products/{{$product_this->id}}">Features
                             & Options</a></li>
-                    <li><a href="/products/{{$product->id}}/models">Technical Details (Models)</a>
+                    <li><a href="/products/{{$product_this->id}}/models">Technical Details (Models)</a>
                     </li>
                 </ul>
 
@@ -55,14 +58,14 @@
                             <div class="media">
                                 <a class="zoom image" rel="product_images"
                                    data-id="products-{{$product_this->id}}" title="{{$product_this->name}}"
-                                   href="/images/width_700.jpg"><img
-                                            src="/images/width_220.png"></a>
+                                   href="{{$product_this->mainpic}}"><img
+                                            src="{{$product_this->mainpic}}?imageView2/0/w/220"></a>
 
                                 <div class="zoomIcon"></div>
                             </div>
                             <div class="thumbnails image">
                                 <img data-id="products-{{$product_this->id}}"
-                                     src="images/width_60.png">
+                                     src="{{$product_this->mainpic}}?imageView2/0/w/60">
                             </div>
                             <div class="thumbnails video">
 

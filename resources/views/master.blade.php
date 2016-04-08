@@ -2,7 +2,6 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="Content-Language" content="en">
 
@@ -16,11 +15,10 @@
           content="CARBOLITE GERO is a world leading manufacturer of high temperature furnaces up to 3000°C and ovens for laboratory, research & process applications.">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
 </head>
 
 <body>
-<div class="frame grid-container grid-parent id-2374086">
+<div class="frame grid-container grid-parent">
     <!-- Top Area -->
     <div class="top-area sidebar-column grid-parent grid-25 tablet-grid-25 mobile-grid-80">
         <a class="logo" href="/"><span>Carbolite Gero Ltd.</span></a>
@@ -35,11 +33,11 @@
     <div class="top-area main-column with-sidebar grid-parent grid-75 tablet-grid-75">
         <div class="header grid-parent grid-100 tablet-grid-100 hide-on-mobile">
             <div class="widgets">
-                <form class="search" method="get" action="http://www.carbolite-gero.com/search/">
-                    <input type="hidden" name="nocache" value="1">
-                    <input type="text" class="search-input" name="search">
-                    <button type="submit" class="search-button">Search</button>
-                </form>
+                {{--<form class="search" method="get" action="http://www.carbolite-gero.com/search/">--}}
+                    {{--<input type="hidden" name="nocache" value="1">--}}
+                    {{--<input type="text" class="search-input" name="search">--}}
+                    {{--<button type="submit" class="search-button">Search</button>--}}
+                {{--</form>--}}
                 <div class="language">
                     <ul>
                         <li class="label"><span>English</span></li>
@@ -63,28 +61,41 @@
             </div>
             <nav class="nav">
                 <ul>
-                    <li @if(url()->current()=='http://'.$_SERVER['SERVER_NAME'])class="current"@endif><a href="/">Home</a></li>
-                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/products'))class="current"@endif><a href="/products">Products</a></li>
-                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/contact-service'))class="current"@endif><a href="/contact-service">Contact & Service</a></li>
-                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/news'))class="current"@endif><a href="/news">News</a></li>
-                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/company'))class="current"@endif><a href="/company">Company</a></li>
-                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/downloads'))class="current"@endif><a href="/downloads">Downloads</a></li>
+                    <li @if(url()->current()=='http://'.$_SERVER['SERVER_NAME'])class="current"@endif><a
+                                href="/">Home</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/products'))class="current"@endif><a
+                                href="/products">Products</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/contact-service'))class="current"@endif><a
+                                href="/contact-service">Contact & Service</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/news'))class="current"@endif><a
+                                href="/news">News</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/company'))class="current"@endif><a
+                                href="/company">Company</a></li>
+                    <li @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/downloads'))class="current"@endif><a
+                                href="/downloads">Downloads</a></li>
                 </ul>
             </nav>
 
         </div>
         <nav class="breadcrumbs grid-100 tablet-grid-100">
             <ul>
-                <li><a href="home/index.html">Carbolite</a></li>
-                <li><a href="home/index.html">Home</a></li>
+                <li><a href="/">Carbolite</a></li>
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/products'))
+                    <li><a href="/products">Products</a></li>
+                    @yield('breadcrumbs')
+                @endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/contact-service'))<li><a href="/contact-service">Contact & Service</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/news'))<li><a href="/news">News</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/company'))<li><a href="/company">Company</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/downloads'))<li><a href="/downloads">Products</a></li>@endif
+
             </ul>
         </nav>
     </div>
 
 
-
     @yield('content')
-    <!-- Mobile Navigation -->
+            <!-- Mobile Navigation -->
     <div id="mobile-nav" class="mobile-nav grid-parent mobile-grid-100 hide-on-tablet hide-on-desktop">
     </div>
 

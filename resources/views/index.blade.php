@@ -102,7 +102,7 @@
             <ul class="toc font-small">
                 @foreach($categories as $category)
                     <li><a href="/products/category/{{$category['id']}}"><img
-                                    src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/category_{{$category['name']}}.jpg"><span>{{$category['name']}}</span></a>
+                                    src="{{$category['main_pic']}}"><span>{{$category['name']}}</span></a>
                         <ul>
                             <li><strong>{{$category['max_temp']}}</strong></li>
 

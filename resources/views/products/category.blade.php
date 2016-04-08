@@ -1,4 +1,7 @@
 @extends('master')
+        @section('breadcrumbs')
+        <li><a href="">{{$category_this['name']}}</a></li>
+        @stop
 
     @section('content')
             <!-- Full-Width Area -->
@@ -30,7 +33,7 @@
     </div>
     <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-$id00">
         <div class="grid-100 content">
-            <div id="c194712" class="csc-default">
+            <div class="csc-default">
                 <div class="banner">
                     <div class="slideshow" data-speed="1600" data-interval="8000">
                         <div class="item">
@@ -43,7 +46,7 @@
                 </div>
             </div>
             <h1>{{ucwords($category_this->name)}}</h1>
-            <div id="c120282" class="csc-default" style="margin-bottom:20px;">
+            <div class="csc-default" style="margin-bottom:20px;">
                 <div>{{$category_this->description}}</div>
             </div>
 

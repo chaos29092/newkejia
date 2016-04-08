@@ -1,5 +1,7 @@
 @extends('master')
-
+@section('breadcrumbs')
+    <li><a href="">{{$product_this['name']}}</a></li>
+    @stop
     @section('content')
             <!-- Full-Width Area -->
     <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent"></div>
@@ -33,36 +35,35 @@
 
                 <ul class="tabs">
                     <li>
-                        <a href="/products/{{$product->id}}">Features
+                        <a href="/products/{{$product_this->id}}">Features
                             & Options</a></li>
                     <li class="current"><a
-                                href="/products/{{$product->id}}/models">Technical
+                                href="/products/{{$product_this->id}}/models">Technical
                             Details (Models)</a></li>
                 </ul>
 
                 <div class="tab-content product_details grid-parent">
                     @foreach($models_this as $model)
-                    <h2>{{ucwords($model->name)}}</h2>
-                    <table>
-                        {!! $model->main !!}
-                    </table>
+                        <h2>{{ucwords($model->name)}}</h2>
+                        <table>
+                            {!! $model->main !!}
+                        </table>
 
-                    <p>
-                        <a href="/products/{{$product->id}}/models/#"
-                           data-show-group="{{$model->name}}"
-                           onclick="$('[data-group=\'{{$model->name}}\']').show();$('[data-show-group=\'{{$model->name}}\']').hide();$('[data-hide-group=\'{{$model->name}}\']').show();return false;">[read
-                            more]</a>
-                        <a href="/products/{{$product->id}}/models/#"
-                           data-hide-group="{{$model->name}}"
-                           onclick="$('[data-group=\'{{$model->name}}\']').hide();$('[data-show-group=\'{{$model->name}}\']').show();$('[data-hide-group=\'{{$model->name}}\']').hide();return false;"
-                           style="display:none">[read less]</a>
-                    </p>
+                        <p>
+                            <a href="/products/{{$product_this->id}}/models/#"
+                               data-show-group="{{$model->name}}"
+                               onclick="$('[data-group=\'{{$model->name}}\']').show();$('[data-show-group=\'{{$model->name}}\']').hide();$('[data-hide-group=\'{{$model->name}}\']').show();return false;">[read
+                                more]</a>
+                            <a href="/products/{{$product_this->id}}/models/#"
+                               data-hide-group="{{$model->name}}"
+                               onclick="$('[data-group=\'{{$model->name}}\']').hide();$('[data-show-group=\'{{$model->name}}\']').show();$('[data-hide-group=\'{{$model->name}}\']').hide();return false;"
+                               style="display:none">[read less]</a>
+                        </p>
 
-                    <table data-group="{{$model->name}}" style="display:none">
-                        {!! $model->more !!}
-                    </table>
+                        <table data-group="{{$model->name}}" style="display:none">
+                            {!! $model->more !!}
+                        </table>
                     @endforeach
-
 
 
                     <p>
