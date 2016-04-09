@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use App\Http\Requests;
 use App\ProductModel;
+use App\TheNew;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -53,4 +54,32 @@ class HomeController extends Controller
         return view('products.models', ['products'=>$products,'categories'=>$categories,'product_this'=>$product_this,'category_this'=>$category_this,'models_this'=>$models_this]);
     }
 
+    public function contact_service()
+    {
+        return view('contact_service');
+    }
+    
+    public function company()
+    {
+        return view('company');
+    }
+
+    public function news_list()
+    {
+        $news = TheNew::orderBy('created_at', 'desc')->where('tag','news')->simplePaginate(25);
+        return view('news.list',['news'=>$news]);
+    }
+
+    public function new_detail($id)
+    {
+        $new = TheNew::find($id);
+        return view('news.news_detail',['new'=>$new]);
+    }
+
+    public function cases_list()
+    {
+        $news = TheNew::orderBy('created_at', 'desc')->where('tag','cases')->simplePaginate(25);
+        return view('news.list',['news'=>$news]);
+    }
+    
 }

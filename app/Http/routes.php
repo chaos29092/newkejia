@@ -12,30 +12,18 @@
 */
 
 Route::get('/','HomeController@index');
-Route::get('/products','HomeController@categories');
+Route::get('/contact-service','HomeController@contact_service');
+Route::get('/company','HomeController@company');
 
+Route::get('/products','HomeController@categories');
 Route::get('/products/category/{id}','HomeController@category');
 Route::get('/products/{id}','HomeController@product');
 Route::get('/products/{id}/models','HomeController@models');
 
-Route::get('/contact-service',function(){
-    return view('contact_service');
-});
-Route::get('/company',function(){
-    return view('company');
-});
-Route::get('/news',function(){
-    return view('news.list');
-});
-Route::get('/news/test',function(){
-    return view('news.news_detals');
-});
-Route::get('/news/newsletter',function(){
-    return view('news.newsletter');
-});
-Route::get('/news/events',function(){
-    return view('news.dates_events');
-});
+Route::get('/news','HomeController@news_list');
+Route::get('/news/cases','HomeController@cases_list');
+Route::get('/news/{id}','HomeController@new_detail');
+
 Route::get('/downloads',function(){
     return view('downloads');
 });
