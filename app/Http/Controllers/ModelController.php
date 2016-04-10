@@ -41,6 +41,9 @@ class ModelController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'name'=>'required',
+        ]);
         $model = new \App\ProductModel();
         $model->name = $request->name;
         $model->main = $request->main;
@@ -84,6 +87,10 @@ class ModelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+            'name'=>'required',
+        ]);
+        
         $model = \App\ProductModel::find($id);
         $model->name = $request->name;
         $model->main = $request->main;

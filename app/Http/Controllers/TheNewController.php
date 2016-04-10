@@ -44,6 +44,11 @@ class TheNewController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'image' => 'image',
+        ]);
+        
         $new = new \App\TheNew();
         $new->title = $request->title;
         $new->profile = $request->profile;
@@ -58,11 +63,12 @@ class TheNewController extends Controller
 
         if ($request->file('image')) {
             $filePath = $request->file('image');
-            $key = 'new_'.$request->title.'.jpg';
+            $entension = $filePath->getClientOriginalExtension();
+            $key = 'new_'.$request->title.'.'.$entension;
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $new->image = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
+            $new->image = env('QINIU_DOMAIN') . $key;
         }
 
         $new->save();
@@ -97,7 +103,7 @@ class TheNewController extends Controller
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
         $auth = new QiniuAuth($accessKey, $secretKey);
         $bucketMgr = new BucketManager($auth);
-        $key = 'new_' . $new->title . '.jpg';
+        $key = str_replace(env('QINIU_DOMAIN'),'',$new->image);
 
         list($ret, $err) = $bucketMgr->stat($bucket, $key);
         $image = !$err;
@@ -114,6 +120,11 @@ class TheNewController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'image' => 'image',
+        ]);
+
         $new = \App\TheNew::find($id);
         $new->title = $request->title;
         $new->profile = $request->profile;
@@ -127,12 +138,14 @@ class TheNewController extends Controller
         $token = $auth->uploadToken($bucket);
 
         if ($request->file('image')) {
+
             $filePath = $request->file('image');
-            $key = 'new_'.$request->title.'.jpg';
+            $entension = $filePath->getClientOriginalExtension();
+            $key = 'new_'.$request->title.'.'.$entension;
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $new->image = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
+            $new->image = env('QINIU_DOMAIN'). $key;
         }
 
         $new->save();
@@ -157,7 +170,7 @@ class TheNewController extends Controller
         $bucketMgr = new BucketManager($auth);
 
         $token = $auth->uploadToken($bucket);
-        $key = 'new_'.$new->title.'.jpg';
+        $key = str_replace(env('QINIU_DOMAIN'),'',$new->image);
         $bucketMgr->delete($bucket, $key);
 
         $new->delete();

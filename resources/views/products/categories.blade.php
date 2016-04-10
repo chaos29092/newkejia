@@ -32,7 +32,7 @@
             <ul class="toc font-small">
                 @foreach($categories as $category)
                     <li><a href="/products/category/{{$category->id}}"><img
-                                    src="{{$category->main_pic}}"><span>{{ucwords($category->name)}}</span></a>
+                                    src="{{$category->main_pic}}?imageView2/2/w/227/h/150"><span>{{ucwords($category->name)}}</span></a>
                         <ul>
                             <li><strong>{{ucwords($category->max_temp)}}</strong></li>
                             @foreach($products->where('category_id',$category->id)->all() as $product)

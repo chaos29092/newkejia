@@ -67,10 +67,10 @@
                                         <ul>
                                             <li class="label"><a href="index.html#">Choose...</a></li>
                                             <li>
-                                                <a href="../../dltmp/www/568a6126-dc88-41dd-bd01-1833bc282b86-7651cb21d419/MF06-EN-v3%2734_AAF1000_AAF1100_AAF1200_GSM1000_GSM1100_GSM1200_VMF1000_VMF1100_VMF1200.pdf?file_id=568a6126-dc88-41dd-bd01-1833bc282b86"
+                                                <a href="http://7xsfqx.com2.z0.glb.qiniucdn.com/category_cate_2.jpg?attname="
                                                    target="_blank"
-                                                   onclick="trackPageview('/downloads/carbolite/568a6126-dc88-41dd-bd01-1833bc282b86/MF06-EN-v3'34_AAF1000_AAF1100_AAF1200_GSM1000_GSM1100_GSM1200_VMF1000_VMF1100_VMF1200.pdf');">[pdf]
-                                                    English (519 KB)</a></li>
+                                                   onclick="trackPageview('http://7xsfqx.com2.z0.glb.qiniucdn.com/category_cate_2.jpg')">[pdf]
+                                                    English 1(519 KB)</a></li>
                                             <li>
                                                 <a href="../../dltmp/www/53e4b57e-9008-432c-a6b4-636500000000-3871d4d1a0ed/MF06-DE-v3%2725_AAF1000_AAF1100_GSM1000_GSM1100_VMF1000_VMF1100.pdf?file_id=53e4b57e-9008-432c-a6b4-636500000000"
                                                    target="_blank"

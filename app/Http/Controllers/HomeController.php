@@ -66,7 +66,7 @@ class HomeController extends Controller
 
     public function news_list()
     {
-        $news = TheNew::orderBy('created_at', 'desc')->where('tag','news')->simplePaginate(25);
+        $news = TheNew::orderBy('updated_at', 'desc')->where('tag','news')->simplePaginate(25);
         return view('news.list',['news'=>$news]);
     }
 
@@ -78,7 +78,7 @@ class HomeController extends Controller
 
     public function cases_list()
     {
-        $news = TheNew::orderBy('created_at', 'desc')->where('tag','cases')->simplePaginate(25);
+        $news = TheNew::orderBy('updated_at', 'desc')->where('tag','cases')->simplePaginate(25);
         return view('news.list',['news'=>$news]);
     }
     

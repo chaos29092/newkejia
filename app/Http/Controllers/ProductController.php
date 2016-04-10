@@ -43,6 +43,12 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'mainpic' => 'image',
+            'categorypic' => 'image',
+        ]);
+
         $product = new \App\Product();
         $product->name = $request->name;
         $product->title = $request->title;
@@ -64,20 +70,22 @@ class ProductController extends Controller
         if ($request->file('mainpic')) {
 
             $filePath = $request->file('mainpic');
-            $key = 'product_' . $request->name . '.jpg';
+            $entension = $filePath->getClientOriginalExtension();
+            $key = 'product_' . $request->name . '.'.$entension;
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->mainpic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
+            $product->mainpic = env('QINIU_DOMAIN') . $key;
         }
         if ($request->file('categorypic')) {
 
             $filePath = $request->file('categorypic');
-            $key = 'product_' . $request->name . '_category.jpg';
+            $entension = $filePath->getClientOriginalExtension();
+            $key = 'product_' . $request->name . '_category.'.$entension;
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->categorypic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
+            $product->categorypic = env('QINIU_DOMAIN') . $key;
         }
 
         $product->save();
@@ -95,8 +103,8 @@ class ProductController extends Controller
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
         $auth = new QiniuAuth($accessKey, $secretKey);
         $bucketMgr = new BucketManager($auth);
-        $key1 = 'product_' . $product->name . '.jpg';
-        $key2 = 'product_' . $product->name . '_category.jpg';
+        $key1 = str_replace(env('QINIU_DOMAIN'),'',$product->mainpic);
+        $key2 = str_replace(env('QINIU_DOMAIN'),'',$product->categorypic);
 
         list($ret1, $err1) = $bucketMgr->stat($bucket, $key1);
         $mainpic = !$err1;
@@ -108,6 +116,12 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'mainpic' => 'image',
+            'categorypic' => 'image',
+        ]);
+
         $product = \App\Product::find($id);
         $product->name = $request->name;
         $product->title = $request->title;
@@ -129,20 +143,22 @@ class ProductController extends Controller
         if ($request->file('mainpic')) {
 
             $filePath = $request->file('mainpic');
-            $key = 'product_' . $request->name . '.jpg';
+            $entension = $filePath->getClientOriginalExtension();
+            $key = 'product_' . $request->name . '.'.$entension;
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->mainpic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
+            $product->mainpic = env('QINIU_DOMAIN') . $key;
         }
         if ($request->file('categorypic')) {
 
             $filePath = $request->file('categorypic');
-            $key = 'product_' . $request->name . '_category.jpg';
+            $entension = $filePath->getClientOriginalExtension();
+            $key = 'product_' . $request->name . '_category.'.$entension;
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->categorypic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
+            $product->categorypic = env('QINIU_DOMAIN') . $key;
         }
 
 
@@ -160,8 +176,8 @@ class ProductController extends Controller
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
         $auth = new QiniuAuth($accessKey, $secretKey);
         $bucketMgr = new BucketManager($auth);
-        $key = 'product_' . $product['name'] . '.jpg';
-        $key2 = 'product_' . $product['name'] . '_category.jpg';
+        $key = str_replace(env('QINIU_DOMAIN'),'',$product->mainpic);
+        $key2 = str_replace(env('QINIU_DOMAIN'),'',$product->categorypic);
         $bucketMgr->delete($bucket, $key);
         $bucketMgr->delete($bucket, $key2);
         $product->delete();
