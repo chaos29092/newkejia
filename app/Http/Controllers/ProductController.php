@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::orderBy('created_at', 'desc')->select('id','name','category_id','updated_at')->paginate(20);
+        $products = Product::orderBy('updated_at', 'desc')->select('id','name','category_id','updated_at')->paginate(20);
         $categories = Category::all();
 
         return view('admin.home', ['products' => $products, 'categories' => $categories]);
@@ -68,7 +68,7 @@ class ProductController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->mainpic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/product_' . $request->name . '.jpg';
+            $product->mainpic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
         }
         if ($request->file('categorypic')) {
 
@@ -77,7 +77,7 @@ class ProductController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->categorypic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/product_' . $request->name . '_category.jpg';
+            $product->categorypic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
         }
 
         $product->save();
@@ -89,7 +89,21 @@ class ProductController extends Controller
         $models = \App\ProductModel::where('product_id',$id)->get();
         $product = \App\Product::find($id);
         $categories = \App\Category::all();
-        return view('admin.product_edit', ['product' => $product,'categories'=>$categories,'models'=>$models]);
+
+        $accessKey = \Config::get('filesystems.disks.qiniu.access_key');
+        $secretKey = \Config::get('filesystems.disks.qiniu.secret_key');
+        $bucket = \Config::get('filesystems.disks.qiniu.bucket');
+        $auth = new QiniuAuth($accessKey, $secretKey);
+        $bucketMgr = new BucketManager($auth);
+        $key1 = 'product_' . $product->name . '.jpg';
+        $key2 = 'product_' . $product->name . '_category.jpg';
+
+        list($ret1, $err1) = $bucketMgr->stat($bucket, $key1);
+        $mainpic = !$err1;
+        list($ret2, $err2) = $bucketMgr->stat($bucket, $key2);
+        $categorypic=!$err2;
+
+        return view('admin.product_edit', ['product' => $product,'categories'=>$categories,'models'=>$models,'mainpic'=>$mainpic,'categorypic'=>$categorypic]);
     }
 
     public function update(Request $request, $id)
@@ -119,7 +133,7 @@ class ProductController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->mainpic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/product_' . $request->name . '.jpg';
+            $product->mainpic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
         }
         if ($request->file('categorypic')) {
 
@@ -128,7 +142,7 @@ class ProductController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $product->categorypic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/product_' . $request->name . '_category.jpg';
+            $product->categorypic = 'http://' . \Config::get('filesystems.disks.qiniu.domain') . '/' . $key;
         }
 
 

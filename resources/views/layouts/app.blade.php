@@ -49,6 +49,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/admin') }}">Products</a></li>
                     <li><a href="{{ url('/admin/categories') }}">Categories</a></li>
+                    <li><a href="{{ url('/admin/new') }}">News</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

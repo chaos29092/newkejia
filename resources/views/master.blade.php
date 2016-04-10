@@ -79,7 +79,7 @@
         </div>
         <nav class="breadcrumbs grid-100 tablet-grid-100">
             <ul>
-                <li><a href="/">Carbolite</a></li>
+                <li><a href="/">Home</a></li>
                 @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/products'))
                     <li><a href="/products">Products</a></li>
                     @yield('breadcrumbs')

@@ -38,12 +38,18 @@
                     <div class="form-group">
                         <label for="mainPicture">产品主图（使用七牛云，图大于600px比较好，.jpg格式，无法删除图片，这里只能新添，无法修改，欲删除，就删产品）。</label>
                         <input name="mainpic" type="file" id="mainPicture">
-                        <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
+                        @if($mainpic)
+                            <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
+                        @endif
+
                     </div>
                     <div class="form-group">
                         <label for="categoryPicture">分类页主图（直接用七牛云存储的相关链接，234px*300px，.jpg格式，无法删除图片，这里只能新添，无法修改，欲删除，就删产品）</label>
                         <input name="categorypic" type="file" id="categoryPicture">
-                        <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}_category.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
+                        @if($categorypic)
+                            <img src="http://{{\Config::get('filesystems.disks.qiniu.domain')}}/product_{{$product['name']}}_category.jpg?imageView2/0/w/200/h/200" alt="{{$product['name']}}">
+                        @endif
+
                     </div>
                     <div class="form-group">
                         <label for="categoryPara">分类页简单参数(li列表)：</label>
@@ -67,10 +73,23 @@
                     </div>
 
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">修改</button>
+                </form>
+                <form action="/admin/product/{{$product['id']}}" method="POST">
+                    <input type="hidden" name="_method" value="delete" />
+                    {!! csrf_field() !!}
+                    <script language="javascript">
+                        function delcfm() {
+                            if (!confirm("确认要删除？")) {
+                                window.event.returnValue = false;
+                            }
+                        }
+                    </script>
+                    <button type="submit" class="btn btn-danger" onClick="delcfm()">删除</button>
                 </form>
                 <br>
                 <div>
+                    <h2>型号管理</h2>
                     <table class="table">
 
                         <tr>
