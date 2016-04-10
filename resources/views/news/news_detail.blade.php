@@ -25,7 +25,7 @@
                 <p><strong>{!! $new->profile !!}
                     </strong></p>
 
-                <div class="image"><img src="{{$new->image}}?imageView2/2/w/200/h/250"
+                <div class="image"><img src="{{env('QINIU_DOMAIN').$new->image}}?imageView2/2/w/200/h/250"
                                         alt="{{$new->title}}"></div>
                 <p>{!! $new->body !!}</p>
 

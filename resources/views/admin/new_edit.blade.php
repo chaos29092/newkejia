@@ -26,7 +26,7 @@
                         <label for="newImage">主图，最大200*250,.jpg格式，只能新添加，不能修改，如修改，删除新闻重新建</label>
                         <input name="image" type="file" />
                         @if($image)
-                            <img src="{{$new['image']}}?imageView2/0/w/200/h/200" alt="{{$new['title']}}">
+                            <img src="{{env('QINIU_DOMAIN').$new['image']}}?imageView2/0/w/200/h/200" alt="{{$new['title']}}">
                         @endif
                     </div>
 

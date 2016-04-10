@@ -22,7 +22,7 @@
                     @foreach($news as $new)
                         <li>
                             <div class="image">
-                                <img src="{{$new->image}}?imageView2/2/w/180/h/180"
+                                <img src="{{env('QINIU_DOMAIN').$new->image}}?imageView2/2/w/180/h/180"
                                      alt="{{$new->title}}">
                             </div>
                             <div class="information">

@@ -68,7 +68,7 @@ class TheNewController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $new->image = env('QINIU_DOMAIN') . $key;
+            $new->image =  $key;
         }
 
         $new->save();
@@ -103,7 +103,7 @@ class TheNewController extends Controller
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
         $auth = new QiniuAuth($accessKey, $secretKey);
         $bucketMgr = new BucketManager($auth);
-        $key = str_replace(env('QINIU_DOMAIN'),'',$new->image);
+        $key = $new->image;
 
         list($ret, $err) = $bucketMgr->stat($bucket, $key);
         $image = !$err;
@@ -145,7 +145,7 @@ class TheNewController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $new->image = env('QINIU_DOMAIN'). $key;
+            $new->image = $key;
         }
 
         $new->save();
@@ -170,7 +170,7 @@ class TheNewController extends Controller
         $bucketMgr = new BucketManager($auth);
 
         $token = $auth->uploadToken($bucket);
-        $key = str_replace(env('QINIU_DOMAIN'),'',$new->image);
+        $key = $new->image;
         $bucketMgr->delete($bucket, $key);
 
         $new->delete();

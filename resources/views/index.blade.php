@@ -102,7 +102,7 @@
             <ul class="toc font-small">
                 @foreach($categories as $category)
                     <li><a href="/products/category/{{$category['id']}}"><img
-                                    src="{{$category['main_pic']}}?imageView2/2/w/227/h/150"><span>{{$category['name']}}</span></a>
+                                    src="{{env('QINIU_DOMAIN').$category['main_pic']}}?imageView2/2/w/227/h/150"><span>{{$category['name']}}</span></a>
                         <ul>
                             <li><strong>{{$category['max_temp']}}</strong></li>
 

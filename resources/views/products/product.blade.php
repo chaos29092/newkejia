@@ -58,14 +58,14 @@
                             <div class="media">
                                 <a class="zoom image" rel="product_images"
                                    data-id="products-{{$product_this->id}}" title="{{$product_this->name}}"
-                                   href="{{$product_this->mainpic}}"><img
-                                            src="{{$product_this->mainpic}}?imageView2/0/w/220"></a>
+                                   href="{{env('QINIU_DOMAIN').$product_this->mainpic}}"><img
+                                            src="{{env('QINIU_DOMAIN').$product_this->mainpic}}?imageView2/0/w/220"></a>
 
                                 <div class="zoomIcon"></div>
                             </div>
                             <div class="thumbnails image">
                                 <img data-id="products-{{$product_this->id}}"
-                                     src="{{$product_this->mainpic}}?imageView2/0/w/60">
+                                     src="{{env('QINIU_DOMAIN').$product_this->mainpic}}?imageView2/0/w/60">
                             </div>
                             <div class="thumbnails video">
 

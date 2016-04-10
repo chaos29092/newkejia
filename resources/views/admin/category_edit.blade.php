@@ -23,14 +23,14 @@
                         <label for="mainPicture">总分类页缩略图（使用七牛云，227*150px，要求.jpg格式，只能添加，无法修改，如修改，最好直接在七牛云里改，不然会影响到已分类的产品）。</label>
                         <input name="main_pic" type="file" />
                         @if($main_pic)
-                            <img src="{{$category['main_pic']}}?imageView2/0/w/200/h/200" alt="{{$category['name']}}">
+                            <img src="{{env('QINIU_DOMAIN').$category['main_pic']}}?imageView2/0/w/200/h/200" alt="{{$category['name']}}">
                         @endif
                     </div>
                     <div class="form-group">
                         <label for="mainPicture">分类页banner（使用七牛云，768*210px，要求.jpg格式，只能添加，无法修改，如修改，最好直接在七牛云里改，不然会影响到已分类的产品）。</label>
                         <input name="banner" type="file" />
                         @if($banner)
-                            <img src="{{$category['banner']}}?imageView2/0/w/200/h/200" alt="{{$category['name']}}">
+                            <img src="{{env('QINIU_DOMAIN').$category['banner']}}?imageView2/0/w/200/h/200" alt="{{$category['name']}}">
                         @endif
                     </div>
                     <div class="form-group">

@@ -37,7 +37,7 @@
                 <div class="banner">
                     <div class="slideshow" data-speed="1600" data-interval="8000">
                         <div class="item">
-                            <img src="{{$category_this->banner}}?imageView2/2/w/768/h/210"/>
+                            <img src="{{env('QINIU_DOMAIN').$category_this->banner}}?imageView2/2/w/768/h/210"/>
 
                             <div class="overlay textright"><span class="headline"></span><span class="subline"></span>
                             </div>
@@ -57,7 +57,7 @@
                         <li>
                             <h2><a href="/products/{{$product->id}}">{{ucwords($product->name)}}</a></h2>
                             <div>
-                                <a href="/products/{{$product->id}}"><img src="{{$product->categorypic}}?imageView2/2/w/234/h/300"
+                                <a href="/products/{{$product->id}}"><img src="{{env('QINIU_DOMAIN').$product->categorypic}}?imageView2/2/w/234/h/300"
                                                                           alt="{{$product->name}}"></a>
                                 <ul>
                                     {!! $product->categorypara !!}

@@ -69,7 +69,7 @@ class CategoryController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $category->main_pic = env('QINIU_DOMAIN') . $key;
+            $category->main_pic = $key;
         }
         if ($request->file('banner')) {
 
@@ -79,7 +79,7 @@ class CategoryController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $category->banner = env('QINIU_DOMAIN') . $key;
+            $category->banner = $key;
         }
 
         $category->save();
@@ -113,8 +113,8 @@ class CategoryController extends Controller
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
         $auth = new QiniuAuth($accessKey, $secretKey);
         $bucketMgr = new BucketManager($auth);
-        $key1 = str_replace(env('QINIU_DOMAIN'),'',$category->main_pic);
-        $key2 = str_replace(env('QINIU_DOMAIN'),'',$category->banner);
+        $key1 = $category->main_pic;
+        $key2 = $category->banner;
 
         list($ret1, $err1) = $bucketMgr->stat($bucket, $key1);
         $main_pic = !$err1;
@@ -159,7 +159,7 @@ class CategoryController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $category->main_pic = env('QINIU_DOMAIN') . $key;
+            $category->main_pic = $key;
         }
         if ($request->file('banner')) {
 
@@ -169,7 +169,7 @@ class CategoryController extends Controller
             $uploadMgr = new UploadManager();
             $uploadMgr->putFile($token, $key, $filePath);
 
-            $category->banner = env('QINIU_DOMAIN') . $key;
+            $category->banner = $key;
         }
 
         $category->save();
@@ -190,8 +190,8 @@ class CategoryController extends Controller
         $bucket = \Config::get('filesystems.disks.qiniu.bucket');
         $auth = new QiniuAuth($accessKey, $secretKey);
         $bucketMgr = new BucketManager($auth);
-        $key = str_replace(env('QINIU_DOMAIN'),'',$category->main_pic);
-        $key2 = str_replace(env('QINIU_DOMAIN'),'',$category->banner);
+        $key = $category->main_pic;
+        $key2 = $category->banner;
         $bucketMgr->delete($bucket, $key);
         $bucketMgr->delete($bucket, $key2);
         $category->delete();
