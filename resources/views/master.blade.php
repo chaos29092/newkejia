@@ -34,9 +34,9 @@
         <div class="header grid-parent grid-100 tablet-grid-100 hide-on-mobile">
             <div class="widgets">
                 {{--<form class="search" method="get" action="http://www.carbolite-gero.com/search/">--}}
-                    {{--<input type="hidden" name="nocache" value="1">--}}
-                    {{--<input type="text" class="search-input" name="search">--}}
-                    {{--<button type="submit" class="search-button">Search</button>--}}
+                {{--<input type="hidden" name="nocache" value="1">--}}
+                {{--<input type="text" class="search-input" name="search">--}}
+                {{--<button type="submit" class="search-button">Search</button>--}}
                 {{--</form>--}}
                 <div class="language">
                     <ul>
@@ -84,10 +84,14 @@
                     <li><a href="/products">Products</a></li>
                     @yield('breadcrumbs')
                 @endif
-                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/contact-service'))<li><a href="/contact-service">Contact & Service</a></li>@endif
-                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/news'))<li><a href="/news">News</a></li>@endif
-                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/company'))<li><a href="/company">Company</a></li>@endif
-                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/downloads'))<li><a href="/downloads">Products</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/contact-service'))
+                    <li><a href="/contact-service">Contact & Service</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/news'))
+                    <li><a href="/news">News</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/company'))
+                    <li><a href="/company">Company</a></li>@endif
+                @if(strpos(url()->current(),$_SERVER['SERVER_NAME'].'/downloads'))
+                    <li><a href="/downloads">Products</a></li>@endif
 
             </ul>
         </nav>
@@ -134,4 +138,19 @@
 </div>
 
 </body>
+<script type='text/javascript'>
+    var $zoho = $zoho || {
+                salesiq: {
+                    values: {}, ready: function () {
+                    }
+                }
+            };
+    var d = document;
+    s = d.createElement('script');
+    s.type = 'text/javascript';
+    s.defer = true;
+    s.src = 'https://salesiq.zoho.com/furnacetech/float.ls?embedname=furnacetech';
+    t = d.getElementsByTagName('script')[0];
+    t.parentNode.insertBefore(s, t);
+</script>
 </html>

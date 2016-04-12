@@ -29,20 +29,32 @@
                 </div>
             </div>
 
-            <div id="c90094" class="csc-default">
+            <div class="csc-default">
                 <div class="csc-header csc-header-n4"><h1>Contact Form</h1></div>
-                <form action="http://www.carbolite-gero.com/contact-service/contact-form/carbolite-contact-form-completed/"
-                      id="mailform8758" name="mailform8758" enctype="multipart/form-data" method="post"
-                      onsubmit="return validateForm('mailform8758','Company\x2FOrganisation,Company\x2Forganisation\x2A\x3A,Title,Title\x2A\x3A,Name,Last\x20name\x2A\x3A,First_Name,First\x20name\x2A\x3A,address,Address\x2A\x3A,postcode,Postcode\x2A\x3A,city,City\x2A\x3A,Country,Country\x2A\x3A,_EMAIL,Email,E\x2Dmail\x2A,Phone,Phone\x2A\x3A,Request,Your\x20request\x2A\x3A','','','')">
-                    <div style="display:none;"><input type="hidden" name="Title*:" id="mailformTitle*:" value=""><input
-                                type="hidden" name="html_enabled" id="mailformhtml_enabled" value="1"><input
-                                type="hidden"
-                                name="subject"
-                                id="mailformsubject"
-                                value="Request from the CARBOLITE GERO website"><input
-                                name="requiredFields" type="hidden"
-                                value="Company\x2FOrganisation,Title,Name,First_Name,address,postcode,city,Country,Email,Phone,Request"><input
-                                type="hidden" name="locationData" value="2380319:tt_content:90094"></div>
+                <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads1909414000000097283 method='POST'
+                      onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
+                    {{--<div style="display:none;"><input type="hidden" name="Title*:" id="mailformTitle*:" value=""><input--}}
+                                {{--type="hidden" name="html_enabled" id="mailformhtml_enabled" value="1"><input--}}
+                                {{--type="hidden"--}}
+                                {{--name="subject"--}}
+                                {{--id="mailformsubject"--}}
+                                {{--value="Request from the CARBOLITE GERO website"><input--}}
+                                {{--name="requiredFields" type="hidden"--}}
+                                {{--value="Company\x2FOrganisation,Title,Name,First_Name,address,postcode,city,Country,Email,Phone,Request"><input--}}
+                                {{--type="hidden" name="locationData" value="2380319:tt_content:90094"></div>--}}
+                    <!-- Do not remove this code. -->
+                    <input type='text' style='display:none;' name='xnQsjsdp'
+                           value='40380622beee77c7a7f9ca99e7a3a010d5975d89fed22a020b8c40d044511c85'/>
+                    <input type='hidden' name='zc_gad' id='zc_gad' value=''/>
+                    <input type='text' style='display:none;' name='xmIwtLD'
+                           value='7f8bfc673685e0b61448e282b2c7901c99b4c268d3f773945a27a2fe00244874'/>
+                    <input type='text' style='display:none;' name='actionType' value='TGVhZHM='/>
+
+                    <input type='text' style='display:none;' name='returnURL'
+                           value='http&#x3a;&#x2f;&#x2f;furnace-tech.com&#x2f;submit_ok'/>
+                    <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'>
+                    <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
+                    <!-- Do not remove this code. -->
                     <div class="rform rform-inputrow rform-comment">
                         <div class="rform-labelfield">
                             <b>For Service Requests please use the <a href="service-spare-parts-request/index.html"
@@ -60,29 +72,24 @@
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformCompany/Organisation">Company/organisation*:</label>
                         </div>
-                        <input type="text" name="Company/Organisation" id="mailformCompany/Organisation" size="20"
+                        <input type="text" name="Company" id="mailformCompany/Organisation" size="20"
                                value="" class="rform-input"></div>
                     <div class="rform rform-inputrow">
                         <div class="rform-labelfield"><label for="mailformIndustry">Industry:</label></div>
                         <select name="Industry" id="mailformIndustry" size="1">
-                            <option value="" selected="selected">Please choose ...</option>
-                            <option value="LL:appdb.advanced_materials">Advanced Materials</option>
-                            <option value="LL:appdb.aerospace">Aerospace</option>
-                            <option value="LL:appdb.automotive">Automotive</option>
-                            <option value="LL:appdb.chemistry">Chemistry</option>
-                            <option value="LL:appdb.coal_coke">Coal / Coke / Iron Ore</option>
-                            <option value="LL:appdb.energy_electronics">Energy / Electronics</option>
-                            <option value="LL:appdb.food_feed">Food / Feedstuffs</option>
-                            <option value="LL:appdb.others">Others</option>
-                            <option value="LL:appdb.precious_metals">Precious Metals</option>
-                            <option value="LL:appdb.research_academia">Research / Academia</option>
-                            <option value="LL:appdb.technical_ceramics">Technical Ceramics</option>
-                            <option value="LL:mailform_options.basic.other">Others</option>
+                            <option value="-None-" selected="selected">Please choose ...</option>
+                            <option value="Material">Materials</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Physics">Physics</option>
+                            <option value="food">Food / Feedstuffs</option>
+                            <option value="Medicine">Medicine</option>
+                            <option value="Mining&#x20;industry">Coal / Coke / Iron Ore</option>
+                            <option value="Other">Others</option>
                         </select></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformTitle">Title*:</label></div>
-                        <select name="Title" id="mailformTitle" size="1">
-                            <option value="" selected="selected">Please choose ...</option>
+                        <select name="Salutation" id="mailformTitle" size="1">
+                            <option value="-None-" selected="selected">Please choose ...</option>
                             <option value="Mrs">Mrs</option>
                             <option value="Ms">Ms</option>
                             <option value="Mr">Mr</option>
@@ -91,29 +98,25 @@
                         </select></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformName">Last name*:</label></div>
-                        <input type="text" name="Name" id="mailformName" size="20" value="" class="rform-input"></div>
+                        <input type="text" name="Last Name" id="mailformName" size="20" value="" class="rform-input"></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformFirst_Name">First
                                 name*:</label></div>
-                        <input type="text" name="First_Name" id="mailformFirst_Name" size="20" value=""
-                               class="rform-input"></div>
-                    <div class="rform rform-inputrow">
-                        <div class="rform-labelfield"><label for="mailformdepartment">Department:</label></div>
-                        <input type="text" name="department" id="mailformdepartment" size="20" value=""
+                        <input type="text" name="First Name" id="mailformFirst_Name" size="20" value=""
                                class="rform-input"></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformaddress">Address*:</label>
                         </div>
-                        <input type="text" name="address" id="mailformaddress" size="20" value="" class="rform-input">
+                        <input type="text" name="Street" id="mailformaddress" size="20" value="" class="rform-input">
                     </div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformpostcode">Postcode*:</label>
                         </div>
-                        <input type="text" name="postcode" id="mailformpostcode" size="20" value="" class="rform-input">
+                        <input type="text" name="Zip Code" id="mailformpostcode" size="20" value="" class="rform-input">
                     </div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformcity">City*:</label></div>
-                        <input type="text" name="city" id="mailformcity" size="20" value="" class="rform-input"></div>
+                        <input type="text" name="City" id="mailformcity" size="20" class="rform-input"></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformCountry">Country*:</label>
                         </div>
@@ -297,76 +300,12 @@
                             <hr>
                             <option value="other_country">Other country</option>
                         </select></div>
-                    <div class="rform rform-inputrow">
-                        <div class="rform-labelfield"><label for="mailformUS_STATE">State (USA):</label></div>
-                        <select name="US_STATE" id="mailformUS_STATE" size="1">
-                            <option value="">Please choose ...</option>
-                            <option value="Alabama">Alabama</option>
-                            <option value="Alaska">Alaska</option>
-                            <option value="American Samoa">American Samoa</option>
-                            <option value="Arizona">Arizona</option>
-                            <option value="Arkansas">Arkansas</option>
-                            <option value="California">California</option>
-                            <option value="Colorado">Colorado</option>
-                            <option value="Connecticut">Connecticut</option>
-                            <option value="Delaware">Delaware</option>
-                            <option value="District of Columbia">District of Columbia</option>
-                            <option value="Florida">Florida</option>
-                            <option value="Georgia">Georgia</option>
-                            <option value="Guam">Guam</option>
-                            <option value="Hawaii">Hawaii</option>
-                            <option value="Idaho">Idaho</option>
-                            <option value="Illinois">Illinois</option>
-                            <option value="Indiana">Indiana</option>
-                            <option value="Iowa">Iowa</option>
-                            <option value="Kansas">Kansas</option>
-                            <option value="Kentucky">Kentucky</option>
-                            <option value="Louisiana">Louisiana</option>
-                            <option value="Maine">Maine</option>
-                            <option value="Maryland">Maryland</option>
-                            <option value="Massachusetts">Massachusetts</option>
-                            <option value="Michigan">Michigan</option>
-                            <option value="Minnesota">Minnesota</option>
-                            <option value="Mississippi">Mississippi</option>
-                            <option value="Missouri">Missouri</option>
-                            <option value="Montana">Montana</option>
-                            <option value="Nebraska">Nebraska</option>
-                            <option value="Nevada">Nevada</option>
-                            <option value="New Hampshire">New Hampshire</option>
-                            <option value="New Jersey">New Jersey</option>
-                            <option value="New Mexico">New Mexico</option>
-                            <option value="New York">New York</option>
-                            <option value="North Carolina">North Carolina</option>
-                            <option value="North Dakota">North Dakota</option>
-                            <option value="Northern Marianas Islands ">Northern Marianas Islands</option>
-                            <option value="Ohio">Ohio</option>
-                            <option value="Oklahoma">Oklahoma</option>
-                            <option value="Oregon">Oregon</option>
-                            <option value="Pennsylvania">Pennsylvania</option>
-                            <option value="Puerto Rico">Puerto Rico</option>
-                            <option value="Rhode Island">Rhode Island</option>
-                            <option value="South Carolina">South Carolina</option>
-                            <option value="South Dakota">South Dakota</option>
-                            <option value="Tennessee">Tennessee</option>
-                            <option value="Texas">Texas</option>
-                            <option value="Utah">Utah</option>
-                            <option value="Vermont">Vermont</option>
-                            <option value="Virginia">Virginia</option>
-                            <option value="Virgin Islands">Virgin Islands</option>
-                            <option value="Washington">Washington</option>
-                            <option value="West Virginia">West Virginia</option>
-                            <option value="Wisconsin">Wisconsin</option>
-                            <option value="Wyoming">Wyoming</option>
-                        </select></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformEmail">E-mail*</label></div>
                         <input type="text" name="Email" id="mailformEmail" size="20" value="" class="rform-input"></div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformPhone">Phone*:</label></div>
                         <input type="text" name="Phone" id="mailformPhone" size="20" value="" class="rform-input"></div>
-                    <div class="rform rform-inputrow">
-                        <div class="rform-labelfield"><label for="mailformFax">Fax:</label></div>
-                        <input type="text" name="Fax" id="mailformFax" size="20" value="" class="rform-input"></div>
                     <div class="rform rform-inputrow">
                         <div class="rform-label">Request</div>
                         <div class=="clear"><!-- ! --></div>
@@ -378,7 +317,7 @@
                     </div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformRequest">Your request*:</label>
-                        </div> <textarea name="Request" id="mailformRequest" cols="20" rows="5">
+                        </div> <textarea name="Description" id="mailformRequest" cols="20" rows="5">
 </textarea></div>
                     <div class="rform rform-inputrow">
                         <div class="rform-label">How did you get to know about Carbolite Gero?*</div>
@@ -386,37 +325,38 @@
                     </div>
                     <div class="rform rform-inputrow">
                         <div class="rform-labelfield"></div>
-                        <select name="Get_to_know" id="mailformGet_to_know" size="1">
-                            <option value="" selected="selected">Please choose ...</option>
-                            <option value="LL:mailform_options.get_to_know.10_internet">Internet (search engine)
+                        <select name="Lead Source" id="mailformGet_to_know" size="1">
+                            <option value="-None-" selected="selected">Please choose ...</option>
+                            <option value="Internet&#x20;&#x28;search&#x20;engine&#x29;">Internet (search engine)
                             </option>
-                            <option value="LL:mailform_options.get_to_know.20_youtube">YouTube/Video portal</option>
-                            <option value="LL:mailform_options.get_to_know.30_colleague">Colleague</option>
-                            <option value="LL:mailform_options.get_to_know.40_existing_customer">Existing customer
+                            <option value="YouTube&#x2f;Video&#x20;portal">YouTube/Video portal</option>
+                            <option value="SNS">SNS</option>
+                            <option value="Colleague">Colleague</option>
+                            <option value="Existing&#x20;customer">Existing customer
                             </option>
-                            <option value="LL:mailform_options.get_to_know.50_exhibition">Exhibition</option>
-                            <option value="LL:mailform_options.get_to_know.60_advertisement">Advertisement</option>
-                            <option value="LL:mailform_options.get_to_know.70_application_note">Application report
+                            <option value="Exhibition">Exhibition</option>
+                            <option value="Advertisement">Advertisement</option>
+                            <option value="Application&#x20;report">Application report
                             </option>
-                            <option value="LL:mailform_options.get_to_know.80_buyers_guide">Buyers' guide</option>
-                            <option value="LL:mailform_options.get_to_know.90_salesperson">Sales person</option>
-                            <option value="LL:mailform_options.basic.other">Others</option>
+                            <option value="Buyers&#x27;&#x20;guide">Buyers' guide</option>
+                            <option value="Sales&#x20;person">Sales person</option>
+                            <option value="Others">Others</option>
                         </select></div>
                     <div class="rform rform-inputrow">
                         <div class="rform-label">Others</div>
                         <div class=="clear"><!-- ! --></div>
                     </div>
                     <div class="rform rform-inputrow rform-check">
-                        <div class="rform-check"><input type="checkbox" value="1" name="appointment"
+                        <div class="rform-check"><input type="checkbox"  name="LEADCF102"
                                                         id="mailformappointment" class="rform-checkbox"></div>
                         <div class="rform-labelfield"><label for="mailformappointment">Please call me to discuss my
                                 request</label></div>
                         <div class=="clear"><!-- ! --></div>
                     </div>
                     <div class="rform rform-inputrow rform-check">
-                        <div class="rform-check"><input type="checkbox" value="1" name="subscribe_carbolite"
+                        <div class="rform-check"><input type="checkbox"  name="Email Opt Out"
                                                         id="mailformsubscribe_carbolite" class="rform-checkbox"></div>
-                        <div class="rform-labelfield"><label for="mailformsubscribe_carbolite">Please include me in your
+                        <div class="rform-labelfield"><label for="mailformsubscribe_carbolite">Please do not include me in your
                                 newsletter mailing list</label></div>
                         <div class=="clear"><!-- ! --></div>
                     </div>
@@ -424,9 +364,89 @@
                         <div class="rform-labelfield"></div>
                         <input type="submit" name="formtype_mail" id="mailformformtype_mail" value="Submit"
                                class="rform-submitbutton"></div>
+
+                    <script>
+                        var mndFileds = new Array('Company', 'First Name', 'Last Name', 'Email', 'Phone', 'Lead Source', 'Industry', 'City', 'Country', 'Description', 'Salutation');
+                        var fldLangVal = new Array('公司啊', '名', '姓', '邮箱', '电话', '线索来源', '行业', '城市', '国家/地区', '描述', '称呼');
+                        var name = '';
+                        var email = '';
+
+                        function checkMandatory() {
+                            for (i = 0; i < mndFileds.length; i++) {
+                                var fieldObj = document.forms['WebToLeads1909414000000097283'][mndFileds[i]];
+                                if (fieldObj) {
+                                    if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
+                                        if (fieldObj.type == 'file') {
+                                            alert('请选择文件进行上传');
+                                            fieldObj.focus();
+                                            return false;
+                                        }
+                                        alert(fldLangVal[i] + ' 不能为空');
+                                        fieldObj.focus();
+                                        return false;
+                                    } else if (fieldObj.nodeName == 'SELECT') {
+                                        if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
+                                            alert(fldLangVal[i] + ' 不能为空');
+                                            fieldObj.focus();
+                                            return false;
+                                        }
+                                    } else if (fieldObj.type == 'checkbox') {
+                                        if (fieldObj.checked == false) {
+                                            alert('Please accept  ' + fldLangVal[i]);
+                                            fieldObj.focus();
+                                            return false;
+                                        }
+                                    }
+                                    try {
+                                        if (fieldObj.name == 'Last Name') {
+                                            name = fieldObj.value;
+                                        }
+                                    } catch (e) {
+                                    }
+                                }
+                            }
+                            trackVisitor();
+                        }
+                    </script>
+                    <script type='text/javascript' id='VisitorTracking'>var $zoho = $zoho || {
+                                    salesiq: {
+                                        values: {},
+                                        ready: function () {
+                                            $zoho.salesiq.floatbutton.visible('hide');
+                                        }
+                                    }
+                                };
+                        var d = document;
+                        s = d.createElement('script');
+                        s.type = 'text/javascript';
+                        s.defer = true;
+                        s.src = 'https://salesiq.zoho.com/furnacetech/float.ls?embedname=furnacetech';
+                        t = d.getElementsByTagName('script')[0];
+                        t.parentNode.insertBefore(s, t);
+                        function trackVisitor() {
+                            try {
+                                if ($zoho) {
+                                    var LDTuvidObj = document.forms['WebToLeads1909414000000097283']['LDTuvid'];
+                                    if (LDTuvidObj) {
+                                        LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
+                                    }
+                                    var firstnameObj = document.forms['WebToLeads1909414000000097283']['First Name'];
+                                    if (firstnameObj) {
+                                        name = firstnameObj.value + ' ' + name;
+                                    }
+                                    $zoho.salesiq.visitor.name(name);
+                                    var emailObj = document.forms['WebToLeads1909414000000097283']['Email'];
+                                    if (emailObj) {
+                                        email = emailObj.value;
+                                        $zoho.salesiq.visitor.email(email);
+                                    }
+                                }
+                            } catch (e) {
+                            }
+                        }</script>
                 </form>
             </div>
-            <div id="c158365" class="csc-default">
+            <div class="csc-default">
                 <div>
                     <div class="rform rform-comment">
                         <div class="rform rform-inputrow">*mandatory fields</div>
