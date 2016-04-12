@@ -55,6 +55,7 @@
                     <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'>
                     <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
                     <!-- Do not remove this code. -->
+                    <input type='text' style='display:none;' id='Pre_url' name='LEADCF4' value="{{url()->previous()}}">
                     <div class="rform rform-inputrow rform-comment">
                         <div class="rform-labelfield">
                             <b>For Service Requests please use the <a href="service-spare-parts-request/index.html"
@@ -317,8 +318,7 @@
                     </div>
                     <div class="rform rform-inputrow rform-required">
                         <div class="rform-labelfield rform-required"><label for="mailformRequest">Your request*:</label>
-                        </div> <textarea name="Description" id="mailformRequest" cols="20" rows="5">
-</textarea></div>
+                        </div> <textarea name="Description" id="mailformRequest" cols="20" rows="8"></textarea></div>
                     <div class="rform rform-inputrow">
                         <div class="rform-label">How did you get to know about Carbolite Gero?*</div>
                         <div class=="clear"><!-- ! --></div>

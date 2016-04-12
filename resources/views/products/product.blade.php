@@ -46,7 +46,7 @@
                     <div class="grid-parent grid-66 tablet-grid-66 mobile-grid-100">
                         <div class="grid-50 tablet-grid-100 mobile-grid-100 grid-parent">
                             <div class="buttons">
-                                <a href="../../../contact-service/contact-formf4c8.html?lltext=contact_form.request&amp;llproduct=C-2-IBF-A"
+                                <a href="/contact-service"
                                    class="button short contact">Contact us</a>
                             </div>
 
