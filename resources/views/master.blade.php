@@ -8,11 +8,11 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css\main.css')}}" media="screen">
     <script src="{{asset('js/kejia.js')}}" type="text/javascript"></script>
 
-    <title>Title</title>
+    <title>@yield('title') - Kejia</title>
     <meta name="keywords"
-          content="carbolite, industrial oven, laboratory oven, tube furnace, chamber furnace, carbolite gero">
+          content="@yield('keywords')">
     <meta name="description"
-          content="CARBOLITE GERO is a world leading manufacturer of high temperature furnaces up to 3000°C and ovens for laboratory, research & process applications.">
+          content="@yield('description')">
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 </head>
@@ -42,20 +42,10 @@
                     <ul>
                         <li class="label"><span>English</span></li>
                         <li class="current"><a href="home/index.html">English</a></li>
-                        <li><a href="http://www.carbolite-gero.de/de/">Deutsch</a></li>
-                        <li><a href="http://www.carbolite-gero.fr/fr/">Fran&ccedil;ais</a></li>
-                        <li><a href="http://www.carbolite-gero.it/it/">Italiano</a></li>
-                        <li><a href="http://www.carbolite-gero.jp/jp/">日本語</a></li>
+                        <li><a href="http://www.carbolite-gero.de/de/">Spain</a></li>
                         <li><a href="http://www.carbolite-gero.cn/cn/">&#20013;&#25991;</a></li>
                         <li><a href="http://www.carbolite-gero.ru/ru/">
                                 &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
-                        <li><a href="http://www.carbolite-gero.pl/pl/home/">Polski</a></li>
-                        <li><a href="http://www.carbolite-gero.ro/ro/">Română</a></li>
-                        <li><a href="http://www.carbolite-gero.cz/cz/">Česky</a></li>
-                        <li><a href="http://www.carbolite-gero.nl/nl/home/">Nederlands</a></li>
-                        <li><a href="http://www.carbolite-gero.sk/sk/">Slovensky</a></li>
-                        <li><a href="http://www.carbolite-gero.bg/bg/">Български</a></li>
-                        <li><a href="http://www.carbolite-gero.hu/hu/kezdolap/">Magyar</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,7 +113,7 @@
                 <li><strong><a href="/products">Products</a></strong></li>
                 <li>&nbsp;</li>
                 <li><a href="/products">Standard Products</a></li>
-                <li><a href="/products">Customize</a></li>
+                <li><a href="/contact-service">Customize</a></li>
             </ul>
         </div>
         <div class="part-of-vs prefix-5 grid-25 tablet-grid-25 mobile-grid-100">

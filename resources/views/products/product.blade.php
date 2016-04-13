@@ -1,4 +1,14 @@
 @extends('master')
+@section('title')
+    {{$product_this->title}}
+@stop
+@section('description')
+    {{$product_this->description}}
+@stop
+@section('keywords')
+    {{$product_this->keywords}}
+@stop
+
 @section('breadcrumbs')
     <li><a href="">{{$product_this['name']}}</a></li>
     @stop
@@ -71,12 +81,10 @@
 
                             </div>
                         </div>
-
                     </div>
-                    <p><b>{!! $product_this->profile !!} <br></b>
+                    <p><b>{!! $product_this->profile !!} <br><br></b>
                         {!! $product_this->main !!}
                     </p>
-
 
                     <h2>Standard Features</h2>
                     <ul id="advantages">
@@ -93,8 +101,7 @@
                     </p>
 
                 </div>
-                <div class="tab-loading"></div>
-                <!-- / pi2 - web-2015-product_details.tpl --></div>
+                <div class="tab-loading"></div></div>
         </div>
     </div>
 @stop

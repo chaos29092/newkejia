@@ -1,5 +1,6 @@
 @extends('master')
 
+
 @section('content')
         <!-- Banner Area -->
 <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent">
