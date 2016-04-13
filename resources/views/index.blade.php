@@ -54,33 +54,15 @@
 
 <!-- Left Content Area -->
 <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
-    <div class="content"><p><b>Carbolite Gero Limited</b><br> Parsons Lane, Hope, <br> Hope Valley, S33 6RB, UK<br>
-            Tel: +44 (0) 1433 620011<br> <a href="mailto:info@carbolite-gero.com" class="mail"
-                                            alt="Opens window for sending email">info@carbolite-gero.com</a></p>
+    <div class="content"><p><b>Kejia Furnace Ltd</b><br> Zhengzhou high tech Development Zone, <br> Magnolia Street No.
+            55, China<br>
+            Tel: +86 (371) 67826992<br> <a href="mailto:info@furnace-tech.com" class="mail"
+                                           alt="Opens window for sending email">info@furnace-tech.com</a></p>
         <hr>
     </div>
     <div class="content">
-        <div id="home_companies">
-            <img src="img/home_companies-placeholder.png" usemap="#home_companies_map">
-            <map name="home_companies_map">
-                <area name="verder-scientific" href="http://verder-scientific.com/" shape="poly"
-                      coords="72,0,108,22,108,62,72,84,36,62,36,22">
-                 
-                <area name="carbolite" href="home/index.html" shape="poly"
-                      coords="108,62,144,84,144,124,108,146,72,124,72,84">
-                 
-                <area name="eltra" href="http://eltra.com/eltra-elemental-analyzers/" shape="poly"
-                      coords="72,124,108,146,108,186,72,208,36,186,36,146">
-                 
-                <area name="retsch" href="http://retsch.com/" shape="poly"
-                      coords="144,124,180,146,180,186,144,208,108,186,108,146">
-                 
-                <area name="atm" href="http://atm-m.com/" shape="poly"
-                      coords="36,186,72,208,72,248,36,270,0,248,0,208">
-                 
-                <area name="retsch-technology" href="http://retsch-technology.com/rt/solutions-in-particle-sizing/"
-                      shape="poly" coords="108,186,144,208,144,248,108,270,72,248,72,208">
-            </map>
+        <div>
+            <img src="{{asset('img/home_companies-placeholder.png')}}">
         </div>
     </div>
     <div class="tagcloud-container content"></div>
@@ -89,13 +71,17 @@
 
 <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
     <div class="grid-100 content">
-        <h1>Carbolite Gero - laboratory & industrial furnaces up to 3000°C</h1>
+        <h1>Kejia Furnace - Laboratory Furnaces, Can Custom Designed! </h1>
 
         <div class="csc-default" style="margin-bottom:20px;">
-            <div>CARBOLITE GERO is a leading manufacturer of high temperature furnaces and ovens from 30°C to 3000°C
-                with a focus on vacuum and special atmosphere technology. With more than 100 years of experience in
-                thermal engineering our products are used in research laboratories, pilot plants and manufacturing
-                sites worldwide.
+            <div>Kejia Furnace is a leading and professional enterprise that specializes in the manufacture of High
+                temp. Laboratory Furnaces worldwide.
+                In order to be more suitable for your requirements, Our customised solutions include products designed
+                to meet specific customer
+                requirements as well as adaptations of a standard model to make it a little larger or smaller or to
+                add more features.
+
+
             </div>
         </div>
         <div class="csc-default">
@@ -116,36 +102,36 @@
             <div class="clear"></div>
         </div>
 
-        <div id="c192748" class="csc-default">
-            <ul class="news-home">
-                <li>
-                    <a href="http://win.verder-scientific.com/future/pure-science-no-fiction/" target="_blank"> <img
-                                src="images/news-competition.jpg" width="223" height="131" alt="">
-                    </a> <span><a href="http://win.verder-scientific.com/future/pure-science-no-fiction/"
-                                  target="_blank">Join our competition to win an electric BMW I3!</a></span>
-                </li>
-                <li>
-                    <a href="products/application-specific-furnaces/metal-and-ceramic-injection-moulding-furnaces-mim-and-cim/pds/index.html">
-                        <img src="images/news-competition.jpg" width="223" height="131" alt="">
-                    </a> <span><a
-                                href="products/application-specific-furnaces/metal-and-ceramic-injection-moulding-furnaces-mim-and-cim/pds/index.html">Debinding
-                            and sintering in one furnace - PDS</a></span>
-                </li>
-                <li>
-                    <a href="products/vacuum-furnace/tube-furnaces/htrh-h2/index.html"> <img
-                                src="images/news-competition.jpg" width="223" height="131" alt="">
-                    </a> <span><a href="products/vacuum-furnace/tube-furnaces/htrh-h2/index.html">Hydrogen Tube
-                            Furnace up to 1600°C - HTRH-H<sub>2</sub></a></span>
-                </li>
-                <li>
-                    <a href="home/news_detail/1003/dl_details/1/file/54369fa5-484c-41ac-bc3c-0f5200000000/index.html"><img
-                                src="images/news-competition.jpg" width="170" height="100"
-                                alt=""></a> <span><a
-                                href="home/news_detail/1003/dl_details/1/file/54369fa5-484c-41ac-bc3c-0f5200000000/index.html">New
-                            issue no. 41</a></span>
-                </li>
-            </ul>
-        </div>
+        {{--<div class="csc-default">--}}
+        {{--<ul class="news-home">--}}
+        {{--<li>--}}
+        {{--<a href="http://win.verder-scientific.com/future/pure-science-no-fiction/" target="_blank"> <img--}}
+        {{--src="images/news-competition.jpg" width="223" height="131" alt="">--}}
+        {{--</a> <span><a href="http://win.verder-scientific.com/future/pure-science-no-fiction/"--}}
+        {{--target="_blank">Join our competition to win an electric BMW I3!</a></span>--}}
+        {{--</li>--}}
+        {{--<li>--}}
+        {{--<a href="products/application-specific-furnaces/metal-and-ceramic-injection-moulding-furnaces-mim-and-cim/pds/index.html">--}}
+        {{--<img src="images/news-competition.jpg" width="223" height="131" alt="">--}}
+        {{--</a> <span><a--}}
+        {{--href="products/application-specific-furnaces/metal-and-ceramic-injection-moulding-furnaces-mim-and-cim/pds/index.html">Debinding--}}
+        {{--and sintering in one furnace - PDS</a></span>--}}
+        {{--</li>--}}
+        {{--<li>--}}
+        {{--<a href="products/vacuum-furnace/tube-furnaces/htrh-h2/index.html"> <img--}}
+        {{--src="images/news-competition.jpg" width="223" height="131" alt="">--}}
+        {{--</a> <span><a href="products/vacuum-furnace/tube-furnaces/htrh-h2/index.html">Hydrogen Tube--}}
+        {{--Furnace up to 1600°C - HTRH-H<sub>2</sub></a></span>--}}
+        {{--</li>--}}
+        {{--<li>--}}
+        {{--<a href="home/news_detail/1003/dl_details/1/file/54369fa5-484c-41ac-bc3c-0f5200000000/index.html"><img--}}
+        {{--src="images/news-competition.jpg" width="170" height="100"--}}
+        {{--alt=""></a> <span><a--}}
+        {{--href="home/news_detail/1003/dl_details/1/file/54369fa5-484c-41ac-bc3c-0f5200000000/index.html">New--}}
+        {{--issue no. 41</a></span>--}}
+        {{--</li>--}}
+        {{--</ul>--}}
+        {{--</div>--}}
     </div>
 </div>
 @stop

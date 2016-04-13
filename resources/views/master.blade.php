@@ -21,10 +21,10 @@
 <div class="frame grid-container grid-parent">
     <!-- Top Area -->
     <div class="top-area sidebar-column grid-parent grid-25 tablet-grid-25 mobile-grid-80">
-        <a class="logo" href="/"><span>Carbolite Gero Ltd.</span></a>
+        <a class="logo" href="/"><span>Kejia Furnace Ltd.</span></a>
     </div>
     <div class="top-area grid-parent mobile-grid-20 hide-on-tablet hide-on-desktop">
-        <a class="mobile-nav-button" href="home.html#mobile-nav">
+        <a class="mobile-nav-button" href="/#mobile-nav">
             <span></span>
             <span></span>
             <span></span>
@@ -107,50 +107,36 @@
     <div class="footer-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent clear">
         <div class="grid-15 tablet-grid-15 hide-on-mobile">
             <ul>
-                <li><a href="products/index.html">Products</a></li>
+                <li><a href="/contact-service">Contact & Service</a></li>
             </ul>
         </div>
         <div class="grid-15 tablet-grid-15 hide-on-mobile">
             <ul>
-                <li><a href="applications/index.html">Applications</a></li>
-                <li><a href="applications/industries/index.html">Industries</a></li>
-                <li><a href="applications/heating-applications/index.html">Heating Applications</a></li>
+                <li><a href="/news">News</a></li>
+                <li><a href="/news/cases">Custom Cases</a></li>
+                <li><a href="/company">Our Company</a></li>
+                <li><a href="/downloads">Downloads</a></li>
             </ul>
         </div>
         <div class="grid-15 tablet-grid-15 mobile-grid-100">
             <ul>
-                <li><strong><a href="https://advancedweb.verder-scientific.com/">AdvancedWeb</a></strong></li>
+                <li><strong><a href="/products">Products</a></strong></li>
                 <li>&nbsp;</li>
-                <li><a href="siteservice/imprint/index.html">Imprint</a></li>
-                <li><a href="siteservice/sitemap/index.html">Sitemap</a></li>
+                <li><a href="/products">Standard Products</a></li>
+                <li><a href="/products">Customize</a></li>
             </ul>
         </div>
         <div class="part-of-vs prefix-5 grid-25 tablet-grid-25 mobile-grid-100">
-            <a href="http://www.verder-scientific.com/"><img src="{{asset('img/footer-vs.png')}}"></a>
+            <img src="{{asset('img/footer-vs.png')}}">
         </div>
     </div>
 
     <!-- Copyright Area -->
     <div class="copyright-area grid-100">
-        &copy; 2016 Carbolite Gero Ltd.
+        &copy; 2016 Kejia Furnace Co., Ltd.
     </div>
 
 </div>
 
 </body>
-<script type='text/javascript'>
-    var $zoho = $zoho || {
-                salesiq: {
-                    values: {}, ready: function () {
-                    }
-                }
-            };
-    var d = document;
-    s = d.createElement('script');
-    s.type = 'text/javascript';
-    s.defer = true;
-    s.src = 'https://salesiq.zoho.com/furnacetech/float.ls?embedname=furnacetech';
-    t = d.getElementsByTagName('script')[0];
-    t.parentNode.insertBefore(s, t);
-</script>
 </html>

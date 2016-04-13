@@ -56,6 +56,11 @@
                     <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
                     <!-- Do not remove this code. -->
                     <input type='text' style='display:none;' id='Pre_url' name='LEADCF4' value="{{url()->previous()}}">
+                    <select style='display:none;' name='LEADCF3'>
+                        <option value='-None-'>-无-</option>
+                        <option selected value='&#x79d1;&#x4f73;'>科佳</option>
+                        <option value='&#x666e;&#x6cf0;'>普泰</option>
+                    </select>
                     <div class="rform rform-inputrow rform-comment">
                         <div class="rform-labelfield">
                             <b>For Service Requests please use the <a href="service-spare-parts-request/index.html"
@@ -367,7 +372,7 @@
 
                     <script>
                         var mndFileds = new Array('Company', 'First Name', 'Last Name', 'Email', 'Phone', 'Lead Source', 'Industry', 'City', 'Country', 'Description', 'Salutation');
-                        var fldLangVal = new Array('公司啊', '名', '姓', '邮箱', '电话', '线索来源', '行业', '城市', '国家/地区', '描述', '称呼');
+                        var fldLangVal = new Array('公司', '名', '姓', '邮箱', '电话', '线索来源', '行业', '城市', '国家/地区', '描述', '称呼');
                         var name = '';
                         var email = '';
 
@@ -408,42 +413,6 @@
                             trackVisitor();
                         }
                     </script>
-                    <script type='text/javascript' id='VisitorTracking'>var $zoho = $zoho || {
-                                    salesiq: {
-                                        values: {},
-                                        ready: function () {
-                                            $zoho.salesiq.floatbutton.visible('hide');
-                                        }
-                                    }
-                                };
-                        var d = document;
-                        s = d.createElement('script');
-                        s.type = 'text/javascript';
-                        s.defer = true;
-                        s.src = 'https://salesiq.zoho.com/furnacetech/float.ls?embedname=furnacetech';
-                        t = d.getElementsByTagName('script')[0];
-                        t.parentNode.insertBefore(s, t);
-                        function trackVisitor() {
-                            try {
-                                if ($zoho) {
-                                    var LDTuvidObj = document.forms['WebToLeads1909414000000097283']['LDTuvid'];
-                                    if (LDTuvidObj) {
-                                        LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
-                                    }
-                                    var firstnameObj = document.forms['WebToLeads1909414000000097283']['First Name'];
-                                    if (firstnameObj) {
-                                        name = firstnameObj.value + ' ' + name;
-                                    }
-                                    $zoho.salesiq.visitor.name(name);
-                                    var emailObj = document.forms['WebToLeads1909414000000097283']['Email'];
-                                    if (emailObj) {
-                                        email = emailObj.value;
-                                        $zoho.salesiq.visitor.email(email);
-                                    }
-                                }
-                            } catch (e) {
-                            }
-                        }</script>
                 </form>
             </div>
             <div class="csc-default">
