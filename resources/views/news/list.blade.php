@@ -6,8 +6,8 @@
     <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
         <nav class="nav">
             <ul>
-                <li><a href="/news">News</a></li>
-                <li><a href="/news/cases">Custom Cases</a></li>
+                <li><a href="/news">{{trans('home.news')}}</a></li>
+                <li><a href="/news/cases">{{trans('home.custom_cases')}}</a></li>
             </ul>
         </nav>
         <div class="tagcloud-container content"></div>
@@ -15,7 +15,7 @@
 
     <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
         <div class="grid-100 content">
-            <h1>@if($news->first()->tag =='news') News @else Custom Cases @endif</h1>
+            <h1>@if($news->first()->tag =='news') {{trans('home.news')}} @else {{trans('home.custom_cases')}} @endif</h1>
 
             <div class="csc-default">
                 <ul class="news-list">
@@ -30,7 +30,7 @@
 
                                 <p>{{$new->profile}}</p>
 
-                                <p><a href="/news/{{$new->id}}" target="_top">[more...]</a></p>
+                                <p><a href="/news/{{$new->id}}" target="_top">[{{trans('home.more')}}...]</a></p>
                             </div>
                         </li>
                     @endforeach

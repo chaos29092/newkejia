@@ -91,7 +91,7 @@
                         {!! $product_this->standard !!}
                     </ul>
 
-                    <h2>Options (<i>specify these at time of order</i>)</h2>
+                    <h2>Accessories (<i>specify these at time of order</i>)</h2>
                     <ul id="options" class="list bidspecs">
                         {!! $product_this->options !!}
                     </ul>
@@ -105,3 +105,4 @@
         </div>
     </div>
 @stop
+

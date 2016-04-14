@@ -11,31 +11,29 @@
 <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
     <nav class="nav">
         <ul>
-            <li><a href="contact-service">Contact & Service</a></li>
+            <li><a href="contact-service">{{trans('home.contact_service')}}</a></li>
         </ul>
     </nav>
     <div class="tagcloud-container content"></div>
 </div>
 <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
     <div class="grid-100 content">
-        <h1>Contact & Service</h1>
+        <h1>{{trans('home.contact_service')}}</h1>
 
-        <div id="c90093" class="csc-default" style="margin-top:10px;margin-bottom:20px;">
-            <div> Kejia Furnace products export all over the world, We offer one years of free warranty, Reasonable
-                annual
-                maintenance charges for services after warranty period is over.
+        <div class="csc-default" style="margin-top:10px;margin-bottom:20px;">
+            <div>{{trans('home.contact_content_1')}}
                 <br><br>
-                If you need to customize the product, you can ask us in the form below to call your later, our engineers will contact you as soon as possible.
+                {{trans('home.contact_content_2')}}
                 <br><br>
-                Address: Zhengzhou high tech Development Zone, <br>
-                Magnolia Street No. 55, China <br>
+                {{trans('home.address_1')}} <br>
+                {{trans('home.address_2')}} <br>
                 Tel: +86 (371) 67826992 <br>
                 Email: <a href="mailto:info@furnace-tech.com">info@furnace-tech.com</a>
             </div>
         </div>
 
         <div class="csc-default">
-            <div class="csc-header csc-header-n4"><h1>Contact Form</h1></div>
+            <div class="csc-header csc-header-n4"><h1>{{trans('home.contact_form')}}</h1></div>
             <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads1909414000000097283 method='POST'
                   onSubmit='javascript:document.charset="UTF-8"; return checkMandatory()' accept-charset='UTF-8'>
                 {{--<div style="display:none;"><input type="hidden" name="Title*:" id="mailformTitle*:" value=""><input--}}
@@ -71,36 +69,34 @@
                 {{--<b>For Service Requests please use the <a href="service-spare-parts-request/index.html"--}}
                 {{--class="external-link-new-window"--}}
                 {{--alt="Service Form">Service Form</a></b>--}}
-
-
                 {{--</div>--}}
                 {{--<div class=="clear"><!-- ! --></div>--}}
                 {{--</div>--}}
-                <div class="rform rform-inputrow">
-                    <div class="rform-label">Contact data</div>
-                    <div class=="clear"><!-- ! --></div>
-                </div>
+                {{--<div class="rform rform-inputrow">--}}
+                    {{--<div class="rform-label">Contact data</div>--}}
+                    {{--<div class=="clear"><!-- ! --></div>--}}
+                {{--</div>--}}
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformCompany/Organisation">Company/organisation*:</label>
+                    <div class="rform-labelfield rform-required"><label for="mailformCompany/Organisation">{{trans('home.company_organisation')}}*:</label>
                     </div>
                     <input type="text" name="Company" id="mailformCompany/Organisation" size="20"
                            value="" class="rform-input"></div>
                 <div class="rform rform-inputrow">
-                    <div class="rform-labelfield"><label for="mailformIndustry">Industry:</label></div>
+                    <div class="rform-labelfield"><label for="mailformIndustry">{{trans('home.industry')}}:</label></div>
                     <select name="Industry" id="mailformIndustry" size="1">
-                        <option value="-None-" selected="selected">Please choose ...</option>
-                        <option value="Material">Materials</option>
-                        <option value="Chemistry">Chemistry</option>
-                        <option value="Physics">Physics</option>
-                        <option value="food">Food / Feedstuffs</option>
-                        <option value="Medicine">Medicine</option>
-                        <option value="Mining&#x20;industry">Coal / Coke / Iron Ore</option>
-                        <option value="Other">Others</option>
+                        <option value="-None-" selected="selected">{{trans('home.please_choose')}} ...</option>
+                        <option value="Material">{{trans('home.materials')}}</option>
+                        <option value="Chemistry">{{trans('home.chemistry')}}</option>
+                        <option value="Physics">{{trans('home.physics')}}</option>
+                        <option value="food">{{trans('home.food_feedstuffs')}}</option>
+                        <option value="Medicine">{{trans('home.medicine')}}</option>
+                        <option value="Mining&#x20;industry">{{trans('home.coal')}}</option>
+                        <option value="Other">{{trans('home.others')}}</option>
                     </select></div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformTitle">Title*:</label></div>
+                    <div class="rform-labelfield rform-required"><label for="mailformTitle">{{trans('home.salutation')}}*:</label></div>
                     <select name="Salutation" id="mailformTitle" size="1">
-                        <option value="-None-" selected="selected">Please choose ...</option>
+                        <option value="-None-" selected="selected">{{trans('home.please_choose')}} ...</option>
                         <option value="Mrs">Mrs</option>
                         <option value="Ms">Ms</option>
                         <option value="Mr">Mr</option>
@@ -108,31 +104,30 @@
                         <option value="Prof">Prof</option>
                     </select></div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformName">Last name*:</label></div>
+                    <div class="rform-labelfield rform-required"><label for="mailformName">{{trans('home.last_name')}}*:</label></div>
                     <input type="text" name="Last Name" id="mailformName" size="20" value="" class="rform-input"></div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformFirst_Name">First
-                            name*:</label></div>
+                    <div class="rform-labelfield rform-required"><label for="mailformFirst_Name">{{trans('home.first_name')}}*:</label></div>
                     <input type="text" name="First Name" id="mailformFirst_Name" size="20" value=""
                            class="rform-input"></div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformaddress">Address*:</label>
+                    <div class="rform-labelfield rform-required"><label for="mailformaddress">{{trans('home.address')}}*:</label>
                     </div>
                     <input type="text" name="Street" id="mailformaddress" size="20" value="" class="rform-input">
                 </div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformpostcode">Postcode*:</label>
+                    <div class="rform-labelfield rform-required"><label for="mailformpostcode">{{trans('home.postcode')}}*:</label>
                     </div>
                     <input type="text" name="Zip Code" id="mailformpostcode" size="20" value="" class="rform-input">
                 </div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformcity">City*:</label></div>
+                    <div class="rform-labelfield rform-required"><label for="mailformcity">{{trans('home.city')}}*:</label></div>
                     <input type="text" name="City" id="mailformcity" size="20" class="rform-input"></div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformCountry">Country*:</label>
+                    <div class="rform-labelfield rform-required"><label for="mailformCountry">{{trans('home.country')}}*:</label>
                     </div>
                     <select name="Country" id="mailformCountry" size="1">
-                        <option value="">Please choose ...</option>
+                        <option value="">{{trans('home.please_choose')}} ...</option>
                         <hr>
                         <option value="united_kingdom">United Kingdom</option>
                         <option value="united_states">United States</option>
@@ -318,68 +313,64 @@
                     <div class="rform-labelfield rform-required"><label for="mailformPhone">Phone*:</label></div>
                     <input type="text" name="Phone" id="mailformPhone" size="20" value="" class="rform-input"></div>
                 <div class="rform rform-inputrow">
-                    <div class="rform-label">Request</div>
+                    <div class="rform-label">{{trans('home.request')}}</div>
                     <div class=="clear"><!-- ! --></div>
                 </div>
                 <div class="rform rform-inputrow rform-comment">
-                    <div class="rform-labelfield"><i>Please specify temperature and size requirements and fully
-                            describe your application.</i></div>
+                    <div class="rform-labelfield"><i>{{trans('home.contact_request')}}</i></div>
                     <div class=="clear"><!-- ! --></div>
                 </div>
                 <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformRequest">Your request*:</label>
+                    <div class="rform-labelfield rform-required"><label for="mailformRequest">{{trans('home.your_request')}}*:</label>
                     </div>
                     <textarea name="Description" id="mailformRequest" cols="20" rows="8"></textarea></div>
                 <div class="rform rform-inputrow">
-                    <div class="rform-label">How did you get to know about Carbolite Gero?*</div>
+                    <div class="rform-label">{{trans('home.contact_how')}}*</div>
                     <div class=="clear"><!-- ! --></div>
                 </div>
                 <div class="rform rform-inputrow">
                     <div class="rform-labelfield"></div>
                     <select name="Lead Source" id="mailformGet_to_know" size="1">
-                        <option value="-None-" selected="selected">Please choose ...</option>
-                        <option value="Internet&#x20;&#x28;search&#x20;engine&#x29;">Internet (search engine)
+                        <option value="-None-" selected="selected">{{trans('home.please_choose')}} ...</option>
+                        <option value="Internet&#x20;&#x28;search&#x20;engine&#x29;">{{trans('home.internet')}}
                         </option>
                         <option value="YouTube&#x2f;Video&#x20;portal">YouTube/Video portal</option>
                         <option value="SNS">SNS</option>
-                        <option value="Colleague">Colleague</option>
-                        <option value="Existing&#x20;customer">Existing customer
+                        <option value="Colleague">{{trans('home.colleague')}}</option>
+                        <option value="Existing&#x20;customer">{{trans('home.existing_customer')}}
                         </option>
-                        <option value="Exhibition">Exhibition</option>
-                        <option value="Advertisement">Advertisement</option>
-                        <option value="Application&#x20;report">Application report
+                        <option value="Exhibition">{{trans('home.exhibition')}}</option>
+                        <option value="Advertisement">{{trans('home.advertisement')}}</option>
+                        <option value="Application&#x20;report">{{trans('home.application_report')}}
                         </option>
-                        <option value="Buyers&#x27;&#x20;guide">Buyers' guide</option>
-                        <option value="Sales&#x20;person">Sales person</option>
-                        <option value="Others">Others</option>
+                        <option value="Buyers&#x27;&#x20;guide">{{trans('home.buy_guide')}}</option>
+                        <option value="Sales&#x20;person">{{trans('home.sales_person')}}</option>
+                        <option value="Others">{{trans('home.others')}}</option>
                     </select></div>
                 <div class="rform rform-inputrow">
-                    <div class="rform-label">Others</div>
+                    <div class="rform-label">{{trans('home.others')}}</div>
                     <div class=="clear"><!-- ! --></div>
                 </div>
                 <div class="rform rform-inputrow rform-check">
                     <div class="rform-check"><input type="checkbox" name="LEADCF102"
                                                     id="mailformappointment" class="rform-checkbox"></div>
-                    <div class="rform-labelfield"><label for="mailformappointment">Please call me to discuss my
-                            request</label></div>
+                    <div class="rform-labelfield"><label for="mailformappointment">{{trans('home.call_me')}}</label></div>
                     <div class=="clear"><!-- ! --></div>
                 </div>
                 <div class="rform rform-inputrow rform-check">
                     <div class="rform-check"><input type="checkbox" name="Email Opt Out"
                                                     id="mailformsubscribe_carbolite" class="rform-checkbox"></div>
-                    <div class="rform-labelfield"><label for="mailformsubscribe_carbolite">Please do not include me in
-                            your
-                            newsletter mailing list</label></div>
+                    <div class="rform-labelfield"><label for="mailformsubscribe_carbolite">{{trans('home.mail_list')}}</label></div>
                     <div class=="clear"><!-- ! --></div>
                 </div>
                 <div class="rform rform-inputrow">
                     <div class="rform-labelfield"></div>
-                    <input type="submit" name="formtype_mail" id="mailformformtype_mail" value="Submit"
+                    <input type="submit" name="formtype_mail" id="mailformformtype_mail" value="{{trans('home.submit')}}"
                            class="rform-submitbutton"></div>
 
                 <script>
                     var mndFileds = new Array('Company', 'First Name', 'Last Name', 'Email', 'Phone', 'Lead Source', 'Industry', 'City', 'Country', 'Description', 'Salutation');
-                    var fldLangVal = new Array('Company', 'First Name', 'Last Name', 'Email', 'Phone', 'Lead Source', 'Industry', 'City', 'Country', 'Description', 'Salutation');
+                    var fldLangVal = new Array('{{trans('home.company')}}', '{{trans('home.first_name')}}', '{{trans('home.last_name')}}', 'Email', 'Phone', 'Lead Source', '{{trans('home.industry')}}', '{{trans('home.city')}}', '{{trans('home.country')}}', '{{trans('home.request')}}', '{{trans('home.salutation')}}');
                     var name = '';
                     var email = '';
 
@@ -389,16 +380,16 @@
                             if (fieldObj) {
                                 if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
                                     if (fieldObj.type == 'file') {
-                                        alert('Select files to upload');
+                                        alert('{{trans('home.select_file')}}');
                                         fieldObj.focus();
                                         return false;
                                     }
-                                    alert(fldLangVal[i] + ' can not be empty');
+                                    alert(fldLangVal[i] + ' {{trans('home.can_not_be_empty')}}');
                                     fieldObj.focus();
                                     return false;
                                 } else if (fieldObj.nodeName == 'SELECT') {
                                     if (fieldObj.options[fieldObj.selectedIndex].value == '-None-') {
-                                        alert(fldLangVal[i] + ' can not be empty');
+                                        alert(fldLangVal[i] + ' {{trans('home.can_not_be_empty')}}');
                                         fieldObj.focus();
                                         return false;
                                     }
@@ -425,7 +416,7 @@
         <div class="csc-default">
             <div>
                 <div class="rform rform-comment">
-                    <div class="rform rform-inputrow">*mandatory fields</div>
+                    <div class="rform rform-inputrow">*{{trans('home.mandatory_fields')}}</div>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
         <div class="csc-default">
             <div class="banner">
                 <div class="slideshow" data-speed="1600" data-interval="5000">
-                    <div class="item"><a href="products/vacuum-furnace/laboratory-furnaces/index.html"><img
+                    <div class="item"><a href="/products"><img
                                     src="images/banner.jpg">
 
                             <div class="overlay textright"><span class="headline">3000°C&nbsp;Laboratory <br>Vacuum Furnace</span><span
@@ -55,15 +55,15 @@
 
 <!-- Left Content Area -->
 <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
-    <div class="content"><p><b>Kejia Furnace Ltd</b><br> Zhengzhou high tech Development Zone, <br> Magnolia Street No.
-            55, China<br>
+    <div class="content"><p><b>{{trans('home.kejia_furnace_ltd')}}</b><br>{{trans('home.address_1')}}
+            <br>{{trans('home.address_2')}}<br>
             Tel: +86 (371) 67826992<br> <a href="mailto:info@furnace-tech.com" class="mail"
                                            alt="Opens window for sending email">info@furnace-tech.com</a></p>
         <hr>
     </div>
     <div class="content">
         <div>
-            <img src="{{asset('img/home_companies-placeholder.png')}}">
+            <img src="{{asset('img/home_companies-placeholder.png')}}" alt="{{trans('home.custom_designed_furnace')}}">
         </div>
     </div>
     <div class="tagcloud-container content"></div>
@@ -72,18 +72,10 @@
 
 <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
     <div class="grid-100 content">
-        <h1>Kejia Furnace - Laboratory Furnaces, Can Custom Designed! </h1>
+        <h1>{{trans('home.index_h1')}}</h1>
 
         <div class="csc-default" style="margin-bottom:20px;">
-            <div>Kejia Furnace is a leading and professional enterprise that specializes in the manufacture of High
-                temp. Laboratory Furnaces worldwide.
-                In order to be more suitable for your requirements, Our customised solutions include products designed
-                to meet specific customer
-                requirements as well as adaptations of a standard model to make it a little larger or smaller or to
-                add more features.
-
-
-            </div>
+            <div>{{trans('home.index_profile')}}</div>
         </div>
         <div class="csc-default">
             <ul class="toc font-small">
