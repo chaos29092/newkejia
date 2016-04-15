@@ -90,6 +90,16 @@ return [
                 quickly as possible, welcome to contact us!',
     'view_and_down'=>'To view and download our company certificates & statements',
     'please_click_here'=>'please click here',
+//down
+    'operating_manuals'=>'Operating Manuals',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
+    ''=>'',
     ''=>'',
     ''=>'',
 

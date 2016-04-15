@@ -12,7 +12,7 @@
     <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
         <nav class="nav">
             <ul>
-                <li><a href="/downloads/operating">Operating Manuals</a></li>
+                <li><a href="/downloads/operating"></a></li>
                 <li><a href="/downloads/brochures">Brochures</a></li>
                 <li><a href="/downloads/miscellaneous">Miscellaneous</a></li>
             </ul>
