@@ -54,7 +54,7 @@
                 <input type='text' style='display:none;' name='actionType' value='TGVhZHM='/>
 
                 <input type='text' style='display:none;' name='returnURL'
-                       value='http&#x3a;&#x2f;&#x2f;furnace-tech.com&#x2f;submit_ok'/>
+                       value='/submit_ok'/>
                 <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'>
                 <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
                 <!-- Do not remove this code. -->

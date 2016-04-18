@@ -48,7 +48,7 @@
 
                         <div class="selector">
                             <ul>
-                                <li class="label"><a href="index.html#">{{trans('home.choose')}}...</a></li>
+                                <li class="label"><a href="index.html#">{{trans('home.please_choose')}}...</a></li>
                                 <li>
                                     <a href="../../dltmp/www/53e4b581-ac1c-4a18-a982-636500000000-df492febc5ee/brochure_catalogue_general_en.pdf?file_id=53e4b581-ac1c-4a18-a982-636500000000"
                                        target="_blank" onclick="trackPageview('../../downloads.html');">[pdf]

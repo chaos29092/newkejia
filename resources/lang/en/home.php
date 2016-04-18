@@ -95,7 +95,6 @@ return [
     'brochures'=>'Brochures',
     'miscellaneous'=>'Miscellaneous',
     'choose_below'=>'All important documents are available for download here. Please choose below.',
-    'choose'=>'Choose',
     'down_description'=>'Please find a list of all Kejia Furnace manuals (product manuals as well as controller manuals) below. You will also find the correct manual in the "Information & Downloads" tab of each product.',
 //product    
     'furnace'=>'Furnace',
