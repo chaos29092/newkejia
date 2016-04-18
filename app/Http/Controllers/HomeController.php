@@ -54,16 +54,6 @@ class HomeController extends Controller
         return view('products.models', ['products'=>$products,'categories'=>$categories,'product_this'=>$product_this,'category_this'=>$category_this,'models_this'=>$models_this]);
     }
 
-    public function contact_service()
-    {
-        return view('contact_service');
-    }
-    
-    public function company()
-    {
-        return view('company');
-    }
-
     public function news_list()
     {
         $news = TheNew::orderBy('updated_at', 'desc')->where('tag','news')->simplePaginate(25);
@@ -81,5 +71,39 @@ class HomeController extends Controller
         $news = TheNew::orderBy('updated_at', 'desc')->where('tag','cases')->simplePaginate(25);
         return view('news.list',['news'=>$news]);
     }
+
+    public function contact_service()
+    {
+        return view('contact_service');
+    }
+
+    public function company()
+    {
+        return view('company');
+    }
     
+    public function downloads()
+    {
+        return view('downloads');
+    }
+    
+    public function operating()
+    {
+        return view('downloads_operating');
+    }
+    
+    public function brochures()
+    {
+        return view('downloads_brochures');
+    }
+    
+    public function miscellaneous()
+    {
+        return view('downloads_miscellaneous');
+    }
+
+    public function submit_ok()
+    {
+        return view('submit_ok');
+    }
 }

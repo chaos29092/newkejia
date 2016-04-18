@@ -111,5 +111,11 @@ return [
     'accessories'=>'Accessories',
     'accessories_1'=>'specify these at time of order',
     'modifications'=>'Content may be subject to modifications or corrections',
+//submit_ok
+    'request_success'=>'Request Success',    
+    'submit_1'=>'We are very glad to receive your message, and would reply as soon as possible.',    
+    'submit_2'=>'If you check "Please call me to discuss my request", Please keep the phone open.',    
+    'submit_3'=>'Or check your mailbox after a while.',    
+    'submit_4'=>'If you are urgent, you can use livechat or dial our number: +86-371-67826992',    
 
 ];

@@ -13,6 +13,7 @@
 
 Route::get('/','HomeController@index');
 Route::get('/contact-service','HomeController@contact_service');
+Route::get('/submit_ok','HomeController@submit_ok');
 Route::get('/company','HomeController@company');
 
 Route::get('/products','HomeController@categories');
@@ -24,18 +25,10 @@ Route::get('/news','HomeController@news_list');
 Route::get('/news/cases','HomeController@cases_list');
 Route::get('/news/{id}','HomeController@new_detail');
 
-Route::get('/downloads',function(){
-    return view('downloads');
-});
-Route::get('/downloads/operating',function(){
-    return view('downloads_operating');
-});
-Route::get('/downloads/brochures',function(){
-    return view('downloads_brochures');
-});
-Route::get('/downloads/miscellaneous',function(){
-    return view('downloads_miscellaneous');
-});
+Route::get('/downloads','HomeController@downloads');
+Route::get('/downloads/operating','HomeController@operating');
+Route::get('/downloads/brochures','HomeController@brochures');
+Route::get('/downloads/miscellaneous','HomeController@miscellaneous');
 
 /*
 |--------------------------------------------------------------------------
