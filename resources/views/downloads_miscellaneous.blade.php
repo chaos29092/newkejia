@@ -8,16 +8,16 @@
     <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
         <nav class="nav">
             <ul>
-                <li><a href="/downloads/operating">Operating Manuals</a></li>
-                <li><a href="/downloads/brochures">Brochures</a></li>
-                <li class="current"><a href="/downloads/miscellaneous">Miscellaneous</a></li>
+                <li><a href="/downloads/operating">{{trans('home.operating_manuals')}}</a></li>
+                <li><a href="/downloads/brochures">{{trans('home.brochures')}}</a></li>
+                <li class="current"><a href="/downloads/miscellaneous">{{trans('home.miscellaneous')}}</a></li>
             </ul>
         </nav>
         <div class="tagcloud-container content"></div>
     </div>
     <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
         <div class="grid-100 content">
-            <div id="c192545" class="csc-default">
+            <div class="csc-default">
                 <div class="banner">
                     <div class="slideshow" data-speed="1600" data-interval="8000">
                         <div class="item"><img src="{{env('QINIU_DOMAIN')}}slider-downloads-manuals.jpg">
@@ -28,15 +28,11 @@
                     </div>
                 </div>
             </div>
-            <h1>Miscellaneous</h1>
+            <h1>{{trans('home.miscellaneous')}}</h1>
 
-            <div id="c195235" class="csc-default">
-
-
+            <div class="csc-default">
                 <div class="foldBox">
-
                     <div class="foldBoxContent">
-
                         <ul class="downloads default">
                             <li>
                                 <div class="thumbnail">
@@ -50,7 +46,7 @@
 
                                     <div class="selector">
                                         <ul>
-                                            <li class="label"><a href="index.html#">Choose...</a></li>
+                                            <li class="label"><a href="index.html#">{{trans('home.choose')}}...</a></li>
                                             <li>
                                                 <a href="../../dltmp/www/53e4b581-ac1c-4a18-a982-636500000000-df492febc5ee/brochure_catalogue_general_en.pdf?file_id=53e4b581-ac1c-4a18-a982-636500000000"
                                                    target="_blank" onclick="trackPageview('../../downloads.html');">[pdf]

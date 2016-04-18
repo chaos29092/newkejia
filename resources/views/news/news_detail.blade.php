@@ -22,8 +22,7 @@
 
                 <h1 class="first">{{ucwords($new->title)}}</h1>
 
-                <p><strong>{!! $new->profile !!}
-                    </strong></p>
+                <p><strong>{!! $new->profile !!}</strong></p>
 
                 <div class="image"><img src="{{env('QINIU_DOMAIN').$new->image}}?imageView2/2/w/200/h/250"
                                         alt="{{$new->title}}"></div>

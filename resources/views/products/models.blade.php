@@ -35,11 +35,9 @@
 
                 <ul class="tabs">
                     <li>
-                        <a href="/products/{{$product_this->id}}">Features
-                            & Options</a></li>
+                        <a href="/products/{{$product_this->id}}">{{trans('home.features_options')}}</a></li>
                     <li class="current"><a
-                                href="/products/{{$product_this->id}}/models">Technical
-                            Details (Models)</a></li>
+                                href="/products/{{$product_this->id}}/models">{{trans('home.technical_details')}}</a></li>
                 </ul>
 
                 <div class="tab-content product_details grid-parent">
@@ -52,12 +50,11 @@
                         <p>
                             <a href="/products/{{$product_this->id}}/models/#"
                                data-show-group="{{$model->name}}"
-                               onclick="$('[data-group=\'{{$model->name}}\']').show();$('[data-show-group=\'{{$model->name}}\']').hide();$('[data-hide-group=\'{{$model->name}}\']').show();return false;">[read
-                                more]</a>
+                               onclick="$('[data-group=\'{{$model->name}}\']').show();$('[data-show-group=\'{{$model->name}}\']').hide();$('[data-hide-group=\'{{$model->name}}\']').show();return false;">[{{trans('home.read_more')}}]</a>
                             <a href="/products/{{$product_this->id}}/models/#"
                                data-hide-group="{{$model->name}}"
                                onclick="$('[data-group=\'{{$model->name}}\']').hide();$('[data-show-group=\'{{$model->name}}\']').show();$('[data-hide-group=\'{{$model->name}}\']').hide();return false;"
-                               style="display:none">[read less]</a>
+                               style="display:none">[{{trans('home.read_less')}}]</a>
                         </p>
 
                         <table data-group="{{$model->name}}" style="display:none">
@@ -67,16 +64,13 @@
 
 
                     <p>
-                        <strong>Please note:</strong><br>
-                        <small>- Heat up rate is measured to 100&deg;C below maximum, using
-                            an empty chamber<br>- Holding power is measured at continuous
-                            operating temperature
-                        </small>
+                        <strong>{{trans('home.please_note')}}:</strong><br>
+                        <small>- {{trans('home.model_note_1')}}<br>
+                               - {{trans('home.model_note_2')}}</small>
                     </p>
 
                     <p>
-                        <small>Content may be subject to modifications or corrections
-                        </small>
+                        <small>{{trans('home.model_note_3')}}</small>
                     </p>
                 </div>
             </div>

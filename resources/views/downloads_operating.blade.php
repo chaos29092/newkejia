@@ -8,9 +8,9 @@
 <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
     <nav class="nav">
         <ul>
-            <li class="current"><a href="/downloads/operating">Operating Manuals</a></li>
-            <li><a href="/downloads/brochures">Brochures</a></li>
-            <li><a href="/downloads/miscellaneous">Miscellaneous</a></li>
+            <li class="current"><a href="/downloads/operating">{{trans('home.operating_manuals')}}</a></li>
+            <li><a href="/downloads/brochures">{{trans('home.brochures')}}</a></li>
+            <li><a href="/downloads/miscellaneous">{{trans('home.miscellaneous')}}</a></li>
         </ul>
     </nav>
     <div class="tagcloud-container content"></div>
@@ -29,21 +29,14 @@
                 </div>
             </div>
         </div>
-        <h1>Operating Manuals</h1>
+        <h1>{{trans('home.operating_manuals')}}</h1>
 
-        <div id="c104830" class="csc-default" style="margin-bottom:25px;">
-            <div>Please find a list of all Kejia Furnace manuals (product manuals as well as controller manuals) below.
-                You will also find the correct manual in the &quot;Information &amp; Downloads&quot; tab of each
-                product.
-            </div>
+        <div class="csc-default" style="margin-bottom:25px;">
+            <div>{{trans('home.down_description')}}</div>
         </div>
-        <div id="c208310" class="csc-default"><!-- web-2015-download_default.tpl -->
-
-
+        <div class="csc-default">
             <div class="foldBox">
-
                 <div class="foldBoxContent">
-
                     <ul class="downloads default">
                         <li>
                             <div class="thumbnail">
@@ -57,7 +50,7 @@
 
                                 <div class="selector">
                                     <ul>
-                                        <li class="label"><a href="index.html#">Choose...</a></li>
+                                        <li class="label"><a href="index.html#">{{trans('home.choose')}}...</a></li>
                                         <li>
                                             <a href="../../dltmp/www/53e4b581-ac1c-4a18-a982-636500000000-df492febc5ee/brochure_catalogue_general_en.pdf?file_id=53e4b581-ac1c-4a18-a982-636500000000"
                                                target="_blank" onclick="trackPageview('../../downloads.html');">[pdf]
@@ -72,10 +65,9 @@
                             </div>
                         </li>
                     </ul>
-                    <!-- / downloads-default.tpl --><!-- / grouped-files.tpl -->
                 </div>
             </div>
-            <!-- / web-2015-download_default.tpl --></div>
+           </div>
     </div>
 </div>
 @stop

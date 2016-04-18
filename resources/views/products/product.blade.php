@@ -40,15 +40,14 @@
     </div>
     <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
         <div class="grid-100 content">
-            <div id="c91168" class="csc-default"><!-- pi2 - web-2015-product_details.tpl -->
+            <div class="csc-default"><!-- pi2 - web-2015-product_details.tpl -->
 
 
                 <h1 class="first">{{ucwords($product_this->name)}}</h1>
 
                 <ul class="tabs">
-                    <li class="current"><a href="/products/{{$product_this->id}}">Features
-                            & Options</a></li>
-                    <li><a href="/products/{{$product_this->id}}/models">Technical Details (Models)</a>
+                    <li class="current"><a href="/products/{{$product_this->id}}">{{trans('home.features_options')}}</a></li>
+                    <li><a href="/products/{{$product_this->id}}/models">{{trans('home.technical_details')}}</a>
                     </li>
                 </ul>
 
@@ -57,7 +56,7 @@
                         <div class="grid-50 tablet-grid-100 mobile-grid-100 grid-parent">
                             <div class="buttons">
                                 <a href="/contact-service"
-                                   class="button short contact">Contact us</a>
+                                   class="button short contact">{{trans('home.contact_us')}}</a>
                             </div>
 
                         </div>
@@ -86,18 +85,18 @@
                         {!! $product_this->main !!}
                     </p>
 
-                    <h2>Standard Features</h2>
+                    <h2>{{trans('home.standard_features')}}</h2>
                     <ul id="advantages">
                         {!! $product_this->standard !!}
                     </ul>
 
-                    <h2>Accessories (<i>specify these at time of order</i>)</h2>
+                    <h2>{{trans('home.accessories')}} (<i>{{trans('home.accessories_1')}}</i>)</h2>
                     <ul id="options" class="list bidspecs">
                         {!! $product_this->options !!}
                     </ul>
 
                     <p>
-                        <small>Content may be subject to modifications or corrections</small>
+                        <small>{{trans('home.modifications')}}</small>
                     </p>
 
                 </div>
