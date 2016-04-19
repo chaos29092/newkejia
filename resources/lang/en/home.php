@@ -116,6 +116,9 @@ return [
     'submit_1'=>'We are very glad to receive your message, and would reply as soon as possible.',    
     'submit_2'=>'If you check "Please call me to discuss my request", Please keep the phone open.',    
     'submit_3'=>'Or check your mailbox after a while.',    
-    'submit_4'=>'If you are urgent, you can use livechat or dial our number: +86-371-67826992',    
-
+    'submit_4'=>'If you are urgent, you can use livechat or dial our number: +86-371-67826992',
+//404
+    '404'=>'404 PAGE NOT FOUND',
+    'not_exist'=>'The page you visited does not exist.',
+    'return_home'=>'Return to home page',
 ];
