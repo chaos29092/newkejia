@@ -1,4 +1,13 @@
 @extends('master')
+@section('title')
+{{trans('keywords.contact_title')}}
+@stop
+@section('description')
+{{trans('keywords.contact_description')}}
+@stop
+@section('keywords')
+{{trans('keywords.contact_keywords')}}
+@stop
 
 @section('content')
         <!-- Full-Width Area -->

@@ -1,7 +1,18 @@
 @extends('master')
+@section('title')
+    {{$product_this->title}}
+@stop
+@section('description')
+    {{$product_this->description}}
+@stop
+@section('keywords')
+    {{$product_this->keywords}}
+@stop
+
 @section('breadcrumbs')
+    <li><a href="/products/category/{{$category_this->id}}">{{$category_this['name']}}</a></li>
     <li><a href="">{{$product_this['name']}}</a></li>
-    @stop
+@stop
     @section('content')
             <!-- Full-Width Area -->
     <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent"></div>
@@ -37,7 +48,8 @@
                     <li>
                         <a href="/products/{{$product_this->id}}">{{trans('home.features_options')}}</a></li>
                     <li class="current"><a
-                                href="/products/{{$product_this->id}}/models">{{trans('home.technical_details')}}</a></li>
+                                href="/products/{{$product_this->id}}/models">{{trans('home.technical_details')}}</a>
+                    </li>
                 </ul>
 
                 <div class="tab-content product_details grid-parent">
@@ -50,7 +62,8 @@
                         <p>
                             <a href="/products/{{$product_this->id}}/models/#"
                                data-show-group="{{$model->name}}"
-                               onclick="$('[data-group=\'{{$model->name}}\']').show();$('[data-show-group=\'{{$model->name}}\']').hide();$('[data-hide-group=\'{{$model->name}}\']').show();return false;">[{{trans('home.read_more')}}]</a>
+                               onclick="$('[data-group=\'{{$model->name}}\']').show();$('[data-show-group=\'{{$model->name}}\']').hide();$('[data-hide-group=\'{{$model->name}}\']').show();return false;">[{{trans('home.read_more')}}
+                                ]</a>
                             <a href="/products/{{$product_this->id}}/models/#"
                                data-hide-group="{{$model->name}}"
                                onclick="$('[data-group=\'{{$model->name}}\']').hide();$('[data-show-group=\'{{$model->name}}\']').show();$('[data-hide-group=\'{{$model->name}}\']').hide();return false;"
@@ -66,7 +79,7 @@
                     <p>
                         <strong>{{trans('home.please_note')}}:</strong><br>
                         <small>- {{trans('home.model_note_1')}}<br>
-                               - {{trans('home.model_note_2')}}</small>
+                            - {{trans('home.model_note_2')}}</small>
                     </p>
 
                     <p>

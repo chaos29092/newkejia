@@ -1,4 +1,13 @@
 @extends('master')
+@section('title')
+    {{trans('keywords.index_title')}}
+@stop
+@section('description')
+    {{trans('keywords.index_description')}}
+@stop
+@section('keywords')
+    {{trans('keywords.index_keywords')}}
+@stop
 
 
 @section('content')

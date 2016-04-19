@@ -1,5 +1,13 @@
 @extends('master')
-
+@section('title')
+    {{trans('keywords.miscellaneous_title')}}
+@stop
+@section('description')
+    {{trans('keywords.miscellaneous_description')}}
+@stop
+@section('keywords')
+    {{trans('keywords.miscellaneous_keywords')}}
+@stop
 
 @section('content')
     <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent"></div>

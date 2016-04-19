@@ -1,14 +1,21 @@
 @extends('master')
-        @section('breadcrumbs')
-        <li><a href="">{{$category_this['name']}}</a></li>
-        @stop
+@section('title')
+    {{$category_this['name']}}
+@stop
+@section('description')
+    {{$category_this['description']}}
+@stop
+@section('keywords')
+    {{$category_this['description']}}
+@stop
+
+@section('breadcrumbs')
+    <li><a href="">{{$category_this['name']}}</a></li>
+    @stop
 
     @section('content')
             <!-- Full-Width Area -->
-    <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent">
-
-
-    </div>
+    <div class="fullwidth-area grid-100 tablet-grid-100 mobile-grid-100 grid-parent"></div>
 
     <!-- Content Area -->
     <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
@@ -57,8 +64,9 @@
                         <li>
                             <h2><a href="/products/{{$product->id}}">{{ucwords($product->name)}}</a></h2>
                             <div>
-                                <a href="/products/{{$product->id}}"><img src="{{env('QINIU_DOMAIN').$product->categorypic}}?imageView2/2/w/234/h/300"
-                                                                          alt="{{$product->name}}"></a>
+                                <a href="/products/{{$product->id}}"><img
+                                            src="{{env('QINIU_DOMAIN').$product->categorypic}}?imageView2/2/w/234/h/300"
+                                            alt="{{$product->name}}"></a>
                                 <ul>
                                     {!! $product->categorypara !!}
                                 </ul>

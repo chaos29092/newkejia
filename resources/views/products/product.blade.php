@@ -10,6 +10,7 @@
 @stop
 
 @section('breadcrumbs')
+    <li><a href="/products/category/{{$category_this->id}}">{{$category_this['name']}}</a></li>
     <li><a href="">{{$product_this['name']}}</a></li>
     @stop
 

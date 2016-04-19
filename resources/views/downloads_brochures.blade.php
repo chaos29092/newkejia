@@ -1,5 +1,13 @@
 @extends('master')
-
+@section('title')
+{{trans('keywords.brochures_title')}}
+@stop
+@section('description')
+{{trans('keywords.brochures_description')}}
+@stop
+@section('keywords')
+{{trans('keywords.brochures_keywords')}}
+@stop
 
 @section('content')
         <!-- Full-Width Area -->
