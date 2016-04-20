@@ -25,7 +25,7 @@
                             </div>
                         </a></div>
                     <div class="item"><a href="http://win.verder-scientific.com/"><img
-                                    src="images/slider-start-competition_en.jpg">
+                                    src="images/banner.jpg">
 
                             <div class="overlay textright"><span class="headline"></span><span
                                         class="subline"></span>
@@ -33,14 +33,14 @@
                         </a></div>
                     <div class="item"><a
                                 href="products/application-specific-furnaces/coal-coke-test-equipment/coal-ash-fusibility-test-furnace/index.html"><img
-                                    src="images/slider-start-coal-ash-fusibility-furnace.jpg">
+                                    src="images/banner.jpg">
 
                             <div class="overlay textright"><span class="headline">New CAF G5 <br>Ash Fusibility Furnace</span><span
                                         class="subline">Advanced automatic analysis software</span></div>
                         </a></div>
                     <div class="item"><a
                                 href="products/application-specific-furnaces/crystal-growth-furnaces/bridgman-crystal-growth-furnace/index.html"><img
-                                    src="images/slider-start-bridgman-crystal-growth.jpg">
+                                    src="images/banner.jpg">
 
                             <div class="overlay textright"><span
                                         class="headline">Bridgman <br>Crystal Growth Furnace</span><span
@@ -49,7 +49,7 @@
                         </a></div>
                     <div class="item"><a
                                 href="products/tube-furnace-range/rotary-tube-furnaces/htr-rotary-reactor-tube-furnaces/index.html"><img
-                                    src="images/slider-start-laboratory-furnace-htr.jpg">
+                                    src="images/banner.jpg">
 
                             <div class="overlay textright"><span
                                         class="headline">Rotary Reactor <br>Tube Furnaces</span><span
