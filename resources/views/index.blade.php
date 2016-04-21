@@ -17,45 +17,28 @@
         <div class="csc-default">
             <div class="banner">
                 <div class="slideshow" data-speed="1600" data-interval="5000">
-                    <div class="item"><a href="/products"><img
-                                    src="images/banner.jpg">
 
-                            <div class="overlay textright"><span class="headline">3000°C&nbsp;Laboratory <br>Vacuum Furnace</span><span
-                                        class="subline">- High vacuum and reactive gases available<br>- Graphite or metal insulation</span>
+                    <div class="item"><a href="/products/category/1"><img
+                                    src="{{env('QINIU_DOMAIN')}}banner1.jpg">
+
+                            <div class="overlay textright"><span class="headline">1700째C&nbsp;Laboratory <br>Muffle Furnace</span><span
+                                        class="subline">- Can be customized according to your needs.<br>- with amazing price.</span>
                             </div>
                         </a></div>
-                    <div class="item"><a href="http://win.verder-scientific.com/"><img
-                                    src="images/banner.jpg">
+                    <div class="item"><a href="/products/category/2"><img
+                                    src="{{env('QINIU_DOMAIN')}}banner2.jpg">
 
-                            <div class="overlay textright"><span class="headline"></span><span
-                                        class="subline"></span>
-                            </div>
+                            <div class="overlay textright"><span class="headline">Kejia <br>Tube Furnace</span><span
+                                        class="subline">Can be customized according to your needs.</span></div>
                         </a></div>
-                    <div class="item"><a
-                                href="products/application-specific-furnaces/coal-coke-test-equipment/coal-ash-fusibility-test-furnace/index.html"><img
-                                    src="images/banner.jpg">
+                    {{--<div class="item"><a--}}
+                                {{--href="products/application-specific-furnaces/coal-coke-test-equipment/coal-ash-fusibility-test-furnace/index.html"><img--}}
+                                    {{--src="images/banner.jpg">--}}
 
-                            <div class="overlay textright"><span class="headline">New CAF G5 <br>Ash Fusibility Furnace</span><span
-                                        class="subline">Advanced automatic analysis software</span></div>
-                        </a></div>
-                    <div class="item"><a
-                                href="products/application-specific-furnaces/crystal-growth-furnaces/bridgman-crystal-growth-furnace/index.html"><img
-                                    src="images/banner.jpg">
+                            {{--<div class="overlay textright"><span class="headline">Kejia <br>Tube Furnace</span><span--}}
+                                        {{--class="subline">Can be customized according to your needs.</span></div>--}}
+                        {{--</a></div>--}}
 
-                            <div class="overlay textright"><span
-                                        class="headline">Bridgman <br>Crystal Growth Furnace</span><span
-                                        class="subline">ideal gradient for the Bridgman method <br>with temperature up to 1800°C</span>
-                            </div>
-                        </a></div>
-                    <div class="item"><a
-                                href="products/tube-furnace-range/rotary-tube-furnaces/htr-rotary-reactor-tube-furnaces/index.html"><img
-                                    src="images/banner.jpg">
-
-                            <div class="overlay textright"><span
-                                        class="headline">Rotary Reactor <br>Tube Furnaces</span><span
-                                        class="subline">for simultaneous heating and mixing</span>
-                            </div>
-                        </a></div>
                 </div>
             </div>
         </div>

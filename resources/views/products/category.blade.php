@@ -54,7 +54,7 @@
             </div>
             <h1>{{ucwords($category_this->name)}}</h1>
             <div class="csc-default" style="margin-bottom:20px;">
-                <div>{{$category_this->description}}</div>
+                <div>{!! $category_this->description !!}</div>
             </div>
 
             <div class="csc-default">
