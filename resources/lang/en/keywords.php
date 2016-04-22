@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'index_title' => 'Laboratory and Industrial Furnaces',
+    'index_title' => 'High Temperature Laboratory Furnaces',
     'index_description' => 'We supply muffle furnace, tube furnace, CVD & PECVD Systems, Vacuum Furnace & Atmosphere Furnace ,dental furnace, and Can be customized according to your needs.',
     'index_keywords' => 'muffle furnace, tube furnace, CVD & PECVD Systems, Vacuum Furnace & Atmosphere Furnace, dental furnace',
 //    /company
