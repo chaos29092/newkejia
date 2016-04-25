@@ -30,9 +30,9 @@ return [
                 to meet specific customer requirements as well as adaptations of a standard model to make it a little
                 larger or smaller or to add more features. The price of our custom service is Amazing!',
 //contact    
-    'contact_content_1'=>'Kejia Furnace products export all over the world, We offer one years of free warranty, Reasonable
+    'contact_content_1'=>'Kejia Furnace products are exported all over the world, We offer one year of free warranty, Reasonable
                 annual maintenance charges for services after warranty period is over.',
-    'contact_content_2'=>'If you need to customize the product, you can ask us in the form below to call your later, our engineers will contact you as soon as possible.',
+    'contact_content_2'=>'If you need to customize the product, you can ask us in the form below, our engineers will contact you as soon as possible.',
     'contact_form'=>'Contact Form',
     'company_organisation'=>'Company/organisation',
     'industry'=>'Industry',
@@ -81,7 +81,7 @@ return [
                 1200/1400/1700C Muffle furnaces, 1200/1400/1600C Tube furnaces, (Vacuum) Crucible furnaces, Vacuum Box
                 furnace, Double(Multi) zones Tube furnaces, Multi-position Rotary Tube furnace, Bottom Loading Muffle
                 furnace, etc...',
-    'company_content_3'=>'In order to be more suitable for your requirements, Our customised solutions include products designed
+    'company_content_3'=>'In order to be more suitable for your requirements, Our customized solutions include products designed
                 to meet specific customer requirements as well as adaptations of a standard model to make it a little
                 larger or smaller or to add more features.',
     'company_content_4'=>'"Supplying service to customer for life" is our service target. So, quality is our most emphasized, all
