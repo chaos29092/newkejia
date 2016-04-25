@@ -30,6 +30,7 @@ Route::get('/downloads/operating','HomeController@operating');
 Route::get('/downloads/brochures','HomeController@brochures');
 Route::get('/downloads/miscellaneous','HomeController@miscellaneous');
 
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

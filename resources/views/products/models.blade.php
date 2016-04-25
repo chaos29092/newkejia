@@ -1,6 +1,6 @@
 @extends('master')
 @section('title')
-    {{$product_this->title}}
+    {{$product_this->title}} Models
 @stop
 @section('description')
     {{$product_this->description}}
