@@ -106,4 +106,9 @@ class HomeController extends Controller
     {
         return view('submit_ok');
     }
+    
+    public function sitemap()
+    {
+        echo simplexml_load_file('sitemap.xml')->asXML();
+    }
 }
