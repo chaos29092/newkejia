@@ -42,9 +42,8 @@
                     <ul>
                         <li class="label"><span>English</span></li>
                         <li class="current"><a href="/">English</a></li>
-                        <li><a href="http://www.carbolite-gero.de/de/">Spain</a></li>
-                        <li><a href="http://www.carbolite-gero.cn/cn/">&#20013;&#25991;</a></li>
-                        <li><a href="http://www.carbolite-gero.ru/ru/">
+                        <li><a href="http://es.furnace-tech.com">Spain</a></li>
+                        <li><a href="http://ru.furnace-tech.com">
                                 &#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</a></li>
                     </ul>
                 </div>

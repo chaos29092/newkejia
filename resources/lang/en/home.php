@@ -111,6 +111,7 @@ return [
     'accessories'=>'Accessories',
     'accessories_1'=>'specify these at time of order',
     'modifications'=>'Content may be subject to modifications or corrections',
+    'have_question'=>'Have any question? Send email to us:',
 //submit_ok
     'request_success'=>'Request Success',    
     'submit_1'=>'We are very glad to receive your message, and would reply as soon as possible.',    

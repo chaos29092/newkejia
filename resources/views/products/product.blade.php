@@ -96,9 +96,8 @@
                         {!! $product_this->options !!}
                     </ul>
 
-                    <p>
-                        <small>{{trans('home.modifications')}}</small>
-                    </p>
+                    <p><small>{{trans('home.modifications')}}<br> {{trans('home.have_question')}}</small>
+                        <a href="mailto:info@furnace-tech.com">info@furnace-tech.com</a></p>
 
                 </div>
                 <div class="tab-loading"></div></div>
