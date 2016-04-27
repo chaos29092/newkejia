@@ -40,18 +40,18 @@
     </div>
     <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-$id00">
         <div class="grid-100 content">
-            <div class="csc-default">
-                <div class="banner">
-                    <div class="slideshow" data-speed="1600" data-interval="8000">
-                        <div class="item">
-                            <img src="{{env('QINIU_DOMAIN').$category_this->banner}}?imageView2/2/w/768/h/210"/>
+            {{--<div class="csc-default">--}}
+                {{--<div class="banner">--}}
+                    {{--<div class="slideshow" data-speed="1600" data-interval="8000">--}}
+                        {{--<div class="item">--}}
+                            {{--<img src="{{env('QINIU_DOMAIN').$category_this->banner}}?imageView2/2/w/768/h/210"/>--}}
 
-                            <div class="overlay textright"><span class="headline"></span><span class="subline"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            {{--<div class="overlay textright"><span class="headline"></span><span class="subline"></span>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <h1>{{ucwords($category_this->name)}}</h1>
             <div class="csc-default" style="margin-bottom:20px;">
                 <div>{!! $category_this->description !!}</div>
