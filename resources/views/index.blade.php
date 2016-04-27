@@ -21,7 +21,7 @@
                     <div class="item"><a href="/products/category/1"><img
                                     src="{{env('QINIU_DOMAIN')}}banner1.jpg">
 
-                            <div class="overlay textright"><span class="headline">1700째C&nbsp;Laboratory <br>Muffle Furnace</span><span
+                            <div class="overlay textright"><span class="headline">1700°C Laboratory <br>Muffle Furnace</span><span
                                         class="subline">- Can be customized according to your needs.<br>- with amazing price.</span>
                             </div>
                         </a></div>
