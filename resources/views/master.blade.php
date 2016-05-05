@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Language" content="{{\Config::get('app.locale')}}">
 
     <link rel="stylesheet" type="text/css" href="{{asset('css\main.css')}}" media="screen">
-    <script src="{{asset('js/kejia.js')}}" type="text/javascript"></script>
+    <script async src="{{asset('js/kejia.js')}}" type="text/javascript"></script>
 
     <title>@yield('title') - Kejia Furnace</title>
     <meta name="keywords"
