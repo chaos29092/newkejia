@@ -23,7 +23,7 @@ return [
     'address_1'=>'Zona de Desarrollo de alta tecnología de Zhengzhou,',
     'address_2'=>'Calle Magnolia No.55, China',
     'custom_designed_furnace'=>'Hornos diseñados a la medida.',
-    'index_h1'=>'Kejia Furnace - ¡Hornos de Laboratorio, diseños hechos a la medida! ',
+    'index_h1'=>'Kejia Furnace - Laboratorio y hornos industriales, servicio de diseño del cliente aceptable! ',
     'index_profile'=>'Kejia Furnace es una empresa líder y profesional que se especializa en la fabricación de Hornos de Laboratorio de alta temperatura en todo el mundo. Con el fin de adaptarnos a sus requerimientos, nuestras soluciones personalizadas incluyen productos diseñados para satisfacer las necesidades específicas de los clientes, así como adaptaciones del modelo estándar para que sea un poco más grande o más pequeño, o para añadir más características. ¡El precio de nuestro servicio personalizado es increíble!',
 //contact    
     'contact_content_1'=>'Los productos de Kejia Furnace son exportados a todo el mundo, ofrecemos un año de garantía gratuita, y cargos de servicio de mantenimiento razonables después de que el periodo de garantía haya culminado.',

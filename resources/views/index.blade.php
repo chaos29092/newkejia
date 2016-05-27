@@ -49,7 +49,7 @@
 <div class="content-area sidebar-column grid-parent grid-25 tablet-grid-25 hide-on-mobile">
     <div class="content"><p><b>{{trans('home.kejia_furnace_ltd')}}</b><br>{{trans('home.address_1')}}
             <br>{{trans('home.address_2')}}<br>
-            Tel: +86 (371) 67826992<br> <a href="mailto:info@furnace-tech.com" class="mail"
+            Tel:  +86-371-67826992<br> Fax: +86-371-67197091<br> <a href="mailto:info@furnace-tech.com" class="mail"
                                            alt="Opens window for sending email">info@furnace-tech.com</a></p>
         <hr>
     </div>

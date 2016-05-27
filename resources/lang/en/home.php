@@ -23,7 +23,7 @@ return [
     'address_1'=>'Zhengzhou high tech Development Zone,',
     'address_2'=>'Magnolia Street No.55, China',
     'custom_designed_furnace'=>'Custom Designed Furnace',
-    'index_h1'=>'Kejia Furnace - Laboratory Furnaces, Can Custom Designed! ',
+    'index_h1'=>'Kejia Furnace-Laboratory & industrial Furnaces, customer  design service acceptable!',
     'index_profile'=>'Kejia Furnace is a leading and professional enterprise that specializes in the manufacture of High
                 temp. Laboratory Furnaces worldwide.
                 In order to be more suitable for your requirements, Our customised solutions include products designed
