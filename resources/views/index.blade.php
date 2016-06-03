@@ -1,12 +1,12 @@
 @extends('master')
 @section('title')
-    {{trans('keywords.index_title')}}
+{{trans('keywords.index_title')}}
 @stop
 @section('description')
-    {{trans('keywords.index_description')}}
+{{trans('keywords.index_description')}}
 @stop
 @section('keywords')
-    {{trans('keywords.index_keywords')}}
+{{trans('keywords.index_keywords')}}
 @stop
 
 
@@ -21,23 +21,23 @@
                     <div class="item"><a href="/products/category/1"><img
                                     src="{{env('QINIU_DOMAIN')}}banner1.jpg">
 
-                            <div class="overlay textright"><span class="headline">1700°C Laboratory <br>Muffle Furnace</span><span
+                            <div class="overlay textright"><span class="headline">50~1700C Laboratory <br>Muffle Furnace</span><span
                                         class="subline">- Can be customized according to your needs.<br>- with amazing price.</span>
                             </div>
                         </a></div>
                     <div class="item"><a href="/products/category/2"><img
                                     src="{{env('QINIU_DOMAIN')}}banner2.jpg">
 
-                            <div class="overlay textright"><span class="headline">Kejia <br>Tube Furnace</span><span
-                                        class="subline">Can be customized according to your needs.</span></div>
+                            <div class="overlay textright"><span class="headline">50~1700C Laboratory<br>Tube Furnace</span><span
+                                        class="subline">- Can be customized according to your needs.<br>- with amazing price.</span></div>
                         </a></div>
-                    {{--<div class="item"><a--}}
-                                {{--href="products/application-specific-furnaces/coal-coke-test-equipment/coal-ash-fusibility-test-furnace/index.html"><img--}}
-                                    {{--src="images/banner.jpg">--}}
+                    <div class="item"><a
+                                href="/products/category/4"><img
+                                    src="{{env('QINIU_DOMAIN')}}banner3.jpg">
 
-                            {{--<div class="overlay textright"><span class="headline">Kejia <br>Tube Furnace</span><span--}}
-                                        {{--class="subline">Can be customized according to your needs.</span></div>--}}
-                        {{--</a></div>--}}
+                            <div class="overlay textright"><span class="headline">1200~1600C <br>Dental Furnace</span><span
+                                        class="subline">- Mainly used for crystallization and sintering of crowns</span></div>
+                        </a></div>
 
                 </div>
             </div>
@@ -50,7 +50,7 @@
     <div class="content"><p><b>{{trans('home.kejia_furnace_ltd')}}</b><br>{{trans('home.address_1')}}
             <br>{{trans('home.address_2')}}<br>
             Tel:  +86-371-67826992<br> Fax: +86-371-67197091<br> <a href="mailto:info@furnace-tech.com" class="mail"
-                                           alt="Opens window for sending email">info@furnace-tech.com</a></p>
+                                                                    alt="Opens window for sending email">info@furnace-tech.com</a></p>
         <hr>
     </div>
     <div class="content">
@@ -106,7 +106,7 @@
         {{--<a href="products/vacuum-furnace/tube-furnaces/htrh-h2/index.html"> <img--}}
         {{--src="images/news-competition.jpg" width="223" height="131" alt="">--}}
         {{--</a> <span><a href="products/vacuum-furnace/tube-furnaces/htrh-h2/index.html">Hydrogen Tube--}}
-        {{--Furnace up to 1600°C - HTRH-H<sub>2</sub></a></span>--}}
+        {{--Furnace up to 1600¡ÆC - HTRH-H<sub>2</sub></a></span>--}}
         {{--</li>--}}
         {{--<li>--}}
         {{--<a href="home/news_detail/1003/dl_details/1/file/54369fa5-484c-41ac-bc3c-0f5200000000/index.html"><img--}}
