@@ -54,7 +54,7 @@
 
                                     <div class="selector">
                                         <ul>
-                                            <li class="label"><a href="index.html#">{{trans('home.please_choose')}}
+                                            <li class="label"><a href="#">{{trans('home.please_choose')}}
                                                     ...</a></li>
                                             <li>
                                                 <a href="{{env('QINIU_DOMAIN')}}kejia-CE.jpg?attname="

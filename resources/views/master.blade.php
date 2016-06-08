@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Language" content="{{\Config::get('app.locale')}}">
 
-    <link rel="stylesheet" type="text/css" href="{{asset('css\main.css')}}" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}" media="screen">
     <script async src="{{asset('js/kejia.js')}}" type="text/javascript"></script>
 
     <title>@yield('title') - Kejia Furnace</title>
@@ -115,7 +115,7 @@
             </ul>
         </div>
         <div class="part-of-vs prefix-5 grid-25 tablet-grid-25 mobile-grid-100">
-            <img src="{{asset('img/footer-vs.png')}}">
+            <img alt="footer" src="{{asset('img/footer-vs.png')}}">
         </div>
     </div>
 

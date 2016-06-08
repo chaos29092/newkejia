@@ -83,7 +83,7 @@
                     </p>
 
                     <p>
-                        <small>{{trans('home.model_note_3')}}<br> {{trans('home.have_question')}}</small>
+                        <small>{{trans('home.model_note_3')}}<br> {{trans('home.have_question')}}
                         <a href="mailto:info@furnace-tech.com">info@furnace-tech.com</a></small>
                     </p>
                 </div>
