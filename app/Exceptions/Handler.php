@@ -8,6 +8,8 @@ use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\Debug\Exception\FlattenException;
+
 
 class Handler extends ExceptionHandler
 {
@@ -45,6 +47,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        $exception = FlattenException::create($e);
+        $statusCode = $exception->getStatusCode($exception);
+
+        if ($statusCode === 404 or $statusCode === 500 and app()->environment() == 'production') {
+            return response()->view('errors.' . $statusCode, [], $statusCode);
+        }
+
         return parent::render($request, $e);
     }
 }

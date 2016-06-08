@@ -3,7 +3,7 @@
     {{$product_this->title}} Models
 @stop
 @section('description')
-    {{$product_this->description}}
+    Models - {{$product_this->description}}
 @stop
 @section('keywords')
     {{$product_this->keywords}}
