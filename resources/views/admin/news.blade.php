@@ -15,6 +15,7 @@
                 <td>标题</td>
                 <td>分类</td>
                 <td>修改日期</td>
+                    <td>查看页面</td>
                     <td><a href="/admin/new/create"><button type="button" class="btn btn-primary">新建</button></a></td>
                 </tr>
 
@@ -23,9 +24,8 @@
                         <td>{{$new['title']}}</td>
                         <td>{{$new['tag']}}</td>
                         <td>{{$new['updated_at']}}</td>
+                        <td><a target="_blank" href="/news/{{$new['id']}}">查看</a></td>
                         <td>
-
-
                             <form action="/admin/new/{{$new['id']}}" method="POST">
                                 <input type="hidden" name="_method" value="delete" />
                                 {!! csrf_field() !!}
