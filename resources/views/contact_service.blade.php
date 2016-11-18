@@ -27,19 +27,6 @@
 </div>
 <div class="content-area main-column with-sidebar grid-parent grid-75 tablet-grid-75 mobile-grid-100">
     <div class="grid-100 content">
-        <h1>{{trans('home.contact_service')}}</h1>
-
-        <div class="csc-default" style="margin-top:10px;margin-bottom:20px;">
-            <div>{{trans('home.contact_content_1')}}
-                <br><br>
-                {{trans('home.contact_content_2')}}
-                <br><br>
-                {{trans('home.address_1')}} <br>
-                {{trans('home.address_2')}} <br>
-                Tel: +86 (371) 67826992 <br>
-                Email: <a href="mailto:info@furnace-tech.com">info@furnace-tech.com</a>
-            </div>
-        </div>
 
         <div class="csc-default">
             <div class="csc-header csc-header-n4"><h1>{{trans('home.contact_form')}}</h1></div>
@@ -67,7 +54,7 @@
                 <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'>
                 <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
                 <!-- Do not remove this code. -->
-                <input type='text' style='display:none;' id='Pre_url' name='LEADCF4' value="{{url()->previous()}}">
+                <input type='text' style='display:none;' id='Pre_url' name='LEADCF4' value="{{url()->current()}}">
                 <select style='display:none;' name='LEADCF3'>
                     <option value='-None-'>-无-</option>
                     <option selected value='&#x79d1;&#x4f73;'>科佳</option>
@@ -90,17 +77,6 @@
                     </div>
                     <input type="text" name="Company" id="mailformCompany/Organisation" size="20"
                            value="" class="rform-input"></div>
-
-                <div class="rform rform-inputrow rform-required">
-                    <div class="rform-labelfield rform-required"><label for="mailformTitle">{{trans('home.salutation')}}*:</label></div>
-                    <select name="Salutation" id="mailformTitle" size="1">
-                        <option value="-None-" selected="selected">{{trans('home.please_choose')}} ...</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="Ms">Ms</option>
-                        <option value="Mr">Mr</option>
-                        <option value="Dr">Dr</option>
-                        <option value="Prof">Prof</option>
-                    </select></div>
 
                 <div class="rform rform-inputrow rform-required">
                     <div class="rform-labelfield rform-required"><label for="mailformFirst_Name">{{trans('home.first_name')}}*:</label></div>
